@@ -25,7 +25,10 @@ CONFIG_FILE = Path(__file__).parent / "config.json"
 
 
 def load_schedule_config() -> dict:
-    cfg = json.loads(CONFIG_FILE.read_text()).get("schedule", {})
+    # Defaults — utilisés tels quels en cloud (pas de config.json sur GitHub Actions)
+    cfg = {}
+    if CONFIG_FILE.exists():
+        cfg = json.loads(CONFIG_FILE.read_text()).get("schedule", {})
     return {
         "lookback_days": cfg.get("lookback_days", 2),
         "min_interest_daily": cfg.get("min_interest_daily", 2),
