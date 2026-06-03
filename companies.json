@@ -1,0 +1,1151 @@
+[
+  {
+    "name": "Touax",
+    "ticker": "ALTOU",
+    "isin": "FR0000033003",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "leasing_rail",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.touax.com/en/investors"
+  },
+  {
+    "name": "GATX",
+    "ticker": "GATX",
+    "isin": "US3616461086",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "leasing_rail",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000040211"
+  },
+  {
+    "name": "Trinity Industries",
+    "ticker": "TRN",
+    "isin": "US8962391004",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "leasing_rail",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000099780"
+  },
+  {
+    "name": "Triton International",
+    "ticker": "TRITN",
+    "isin": "BMG9078F1077",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "leasing_container",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001660734"
+  },
+  {
+    "name": "Greenbrier Companies",
+    "ticker": "GBX",
+    "isin": "US3946311038",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "leasing_rail",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000923120"
+  },
+  {
+    "name": "Getlink",
+    "ticker": "GET",
+    "isin": "FR0010533075",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.getlinkgroup.com/en/investors"
+  },
+  {
+    "name": "COSCO Shipping",
+    "ticker": "601919",
+    "isin": "CNE1000031W8",
+    "country": "CN",
+    "exchange": "SSE",
+    "sector": "shipping_container",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://en.coscoshipping.com/col/col18386/index.html"
+  },
+  {
+    "name": "AP Moller - Maersk",
+    "ticker": "MAERSK.B",
+    "isin": "DK0010244508",
+    "country": "DK",
+    "exchange": "CPH",
+    "sector": "shipping_container",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://investor.maersk.com"
+  },
+  {
+    "name": "Hapag-Lloyd",
+    "ticker": "HLAG",
+    "isin": "DE000HLAG475",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "shipping_container",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.hapag-lloyd.com/en/ir.html"
+  },
+  {
+    "name": "SFL Corporation",
+    "ticker": "SFL",
+    "isin": "BMG7858K1009",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "shipping_leasing",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001289877"
+  },
+  {
+    "name": "Flex LNG",
+    "ticker": "FLNG",
+    "isin": "BMG359471087",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "shipping_lng",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001772253"
+  },
+  {
+    "name": "Capital Clean Energy Carriers",
+    "ticker": "CCEC",
+    "isin": "MHY1968P1218",
+    "country": "MH",
+    "exchange": "NASDAQ",
+    "sector": "shipping_lng",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001392326"
+  },
+  {
+    "name": "Navigator Gas",
+    "ticker": "NVGS",
+    "isin": "MHY6138L1014",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_gas",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001581804"
+  },
+  {
+    "name": "EXMAR",
+    "ticker": "EXM",
+    "isin": "BE0003808251",
+    "country": "BE",
+    "exchange": "EBR",
+    "sector": "shipping_gas",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.exmar.be/en/investors"
+  },
+  {
+    "name": "Tallink",
+    "ticker": "TAL1T",
+    "isin": "EE3100004466",
+    "country": "EE",
+    "exchange": "TLX",
+    "sector": "shipping_ferry",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.tallink.com/investor-relations"
+  },
+  {
+    "name": "DFDS",
+    "ticker": "DFDS",
+    "isin": "DK0010259127",
+    "country": "DK",
+    "exchange": "CPH",
+    "sector": "shipping_ferry",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.dfds.com/en/about/investor-relations"
+  },
+  {
+    "name": "Irish Continental Group",
+    "ticker": "IR5B",
+    "isin": "IE0003753582",
+    "country": "IE",
+    "exchange": "ISE",
+    "sector": "shipping_ferry",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.icg.ie/investor-relations"
+  },
+  {
+    "name": "Wallenius Wilhelmsen",
+    "ticker": "WAWI",
+    "isin": "NO0010791353",
+    "country": "NO",
+    "exchange": "OSE",
+    "sector": "shipping_ro_ro",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.walleniuswilhelmsen.com/investor-relations"
+  },
+  {
+    "name": "Hoegh Autoliners",
+    "ticker": "HAUTO",
+    "isin": "NO0011031479",
+    "country": "NO",
+    "exchange": "OSE",
+    "sector": "shipping_ro_ro",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.hoeghautoliners.com/investors"
+  },
+  {
+    "name": "Mitsui OSK Lines",
+    "ticker": "9104",
+    "isin": "JP3362700001",
+    "country": "JP",
+    "exchange": "TSE",
+    "sector": "shipping_diversified",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.mol.co.jp/en/ir"
+  },
+  {
+    "name": "CMB Tech",
+    "ticker": "CMBT",
+    "isin": "BE0974387194",
+    "country": "BE",
+    "exchange": "EBR",
+    "sector": "shipping_diversified",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.cmb.tech/investors"
+  },
+  {
+    "name": "Star Bulk Carriers",
+    "ticker": "SBLK",
+    "isin": "MHY8162K2046",
+    "country": "MH",
+    "exchange": "NASDAQ",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001386716"
+  },
+  {
+    "name": "Genco Shipping & Trading",
+    "ticker": "GNK",
+    "isin": "MHY2798G1010",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001326200"
+  },
+  {
+    "name": "Safe Bulkers",
+    "ticker": "SB",
+    "isin": "MHY7388P1030",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001434754"
+  },
+  {
+    "name": "2020 Bulkers",
+    "ticker": "2020",
+    "isin": "NO0010861651",
+    "country": "NO",
+    "exchange": "OSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.2020bulkers.com/investors"
+  },
+  {
+    "name": "Himalaya Shipping",
+    "ticker": "HSHP",
+    "isin": "BMG4487L1090",
+    "country": "BM",
+    "exchange": "OSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://himalaya-shipping.com/investors"
+  },
+  {
+    "name": "Diana Shipping",
+    "ticker": "DSX",
+    "isin": "MHY2072N1050",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001318885"
+  },
+  {
+    "name": "Navios Maritime Partners",
+    "ticker": "NMM",
+    "isin": "MHY6360M1045",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001415921"
+  },
+  {
+    "name": "Pacific Basin Shipping",
+    "ticker": "2343",
+    "isin": "BMG6839A1075",
+    "country": "HK",
+    "exchange": "HKEX",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.pacificbasin.com/en/investors"
+  },
+  {
+    "name": "D/S Norden",
+    "ticker": "DNORD",
+    "isin": "DK0060083210",
+    "country": "DK",
+    "exchange": "CPH",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.ds-norden.com/investors"
+  },
+  {
+    "name": "Seanergy Maritime",
+    "ticker": "SHIP",
+    "isin": "MHY7542C1306",
+    "country": "MH",
+    "exchange": "NASDAQ",
+    "sector": "shipping_dry_bulk",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001448397"
+  },
+  {
+    "name": "Frontline",
+    "ticker": "FRO",
+    "isin": "BMG3682E1921",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000913290"
+  },
+  {
+    "name": "International Seaways",
+    "ticker": "INSW",
+    "isin": "MHY4488M1093",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001679049"
+  },
+  {
+    "name": "DHT Holdings",
+    "ticker": "DHT",
+    "isin": "MHY2066S1093",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001331284"
+  },
+  {
+    "name": "Hafnia",
+    "ticker": "HAFNI",
+    "isin": "BMG4593F1389",
+    "country": "BM",
+    "exchange": "OSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.hafnia.com/investor-relations"
+  },
+  {
+    "name": "Scorpio Tankers",
+    "ticker": "STNG",
+    "isin": "MHY7542M1340",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001483934"
+  },
+  {
+    "name": "Torm",
+    "ticker": "TRMD.A",
+    "isin": "DK0060645319",
+    "country": "DK",
+    "exchange": "NASDAQ",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001655891"
+  },
+  {
+    "name": "Teekay Tankers",
+    "ticker": "TNK",
+    "isin": "MHY8564M1034",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001419945"
+  },
+  {
+    "name": "Okeanis Eco Tankers",
+    "ticker": "ECO",
+    "isin": "MHY6589N1090",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001964954"
+  },
+  {
+    "name": "Nordic American Tankers",
+    "ticker": "NAT",
+    "isin": "BMG654181086",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001000177"
+  },
+  {
+    "name": "Tsakos Energy Navigation",
+    "ticker": "TEN",
+    "isin": "MHY8564N1016",
+    "country": "MH",
+    "exchange": "NYSE",
+    "sector": "shipping_tanker",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001166663"
+  },
+  {
+    "name": "Cadeler",
+    "ticker": "CADLR",
+    "isin": "NO0010716582",
+    "country": "NO",
+    "exchange": "NYSE",
+    "sector": "offshore_wind",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001978867"
+  },
+  {
+    "name": "DEME Group",
+    "ticker": "DEME",
+    "isin": "BE0974464068",
+    "country": "BE",
+    "exchange": "EBR",
+    "sector": "offshore_wind",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.deme-group.com/investors"
+  },
+  {
+    "name": "DHL Group",
+    "ticker": "DHL",
+    "isin": "DE0005552004",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.dhl.com/global-en/home/investors.html"
+  },
+  {
+    "name": "FedEx",
+    "ticker": "FDX",
+    "isin": "US31428X1063",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001048911"
+  },
+  {
+    "name": "UPS",
+    "ticker": "UPS",
+    "isin": "US9113121068",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001090727"
+  },
+  {
+    "name": "ID Logistics",
+    "ticker": "IDL",
+    "isin": "FR0010929125",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.id-logistics.com/en/finance"
+  },
+  {
+    "name": "Elanders",
+    "ticker": "ELAN.B",
+    "isin": "SE0000671711",
+    "country": "SE",
+    "exchange": "STO",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.elanders.com/en/investors"
+  },
+  {
+    "name": "GXO Logistics",
+    "ticker": "GXO",
+    "isin": "US36262G1013",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001852244"
+  },
+  {
+    "name": "InPost",
+    "ticker": "INPST",
+    "isin": "LU2290522684",
+    "country": "LU",
+    "exchange": "AMS",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://investors.inpost.eu"
+  },
+  {
+    "name": "DSV",
+    "ticker": "DSV",
+    "isin": "DK0060079531",
+    "country": "DK",
+    "exchange": "CPH",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://ir.dsv.com"
+  },
+  {
+    "name": "Kuehne + Nagel",
+    "ticker": "KNIN",
+    "isin": "CH0025238863",
+    "country": "CH",
+    "exchange": "SIX",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://ir.kuehne-nagel.com"
+  },
+  {
+    "name": "Expeditors International",
+    "ticker": "EXPD",
+    "isin": "US3021301094",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000746515"
+  },
+  {
+    "name": "PostNL",
+    "ticker": "PNL",
+    "isin": "NL0009739416",
+    "country": "NL",
+    "exchange": "AMS",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.postnl.nl/en/investor-relations"
+  },
+  {
+    "name": "Österreichische Post",
+    "ticker": "POST",
+    "isin": "AT0000APOST4",
+    "country": "AT",
+    "exchange": "WBAG",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.post.at/en/about-us/investor-relations"
+  },
+  {
+    "name": "Logista",
+    "ticker": "LOG",
+    "isin": "ES0105065009",
+    "country": "ES",
+    "exchange": "BME",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.logista.com/en/investors"
+  },
+  {
+    "name": "STEF",
+    "ticker": "STF",
+    "isin": "FR0000072894",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.stef.com/en/investors"
+  },
+  {
+    "name": "XPO",
+    "ticker": "XPO",
+    "isin": "US9837931008",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001166003"
+  },
+  {
+    "name": "C.H. Robinson",
+    "ticker": "CHRW",
+    "isin": "US12541W2098",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001043277"
+  },
+  {
+    "name": "Ryder System",
+    "ticker": "R",
+    "isin": "US7835491082",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "logistics",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0000085961"
+  },
+  {
+    "name": "Vinci",
+    "ticker": "DG",
+    "isin": "FR0000125486",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.vinci.com/vinci.nsf/en/investors.htm"
+  },
+  {
+    "name": "Sacyr",
+    "ticker": "SCYR",
+    "isin": "ES0182870214",
+    "country": "ES",
+    "exchange": "BME",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.sacyr.com/en/investor-relations"
+  },
+  {
+    "name": "Atlas Arteria",
+    "ticker": "ALX",
+    "isin": "AU000000ALX1",
+    "country": "AU",
+    "exchange": "ASX",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.atlasarteria.com/investors"
+  },
+  {
+    "name": "Ferrovial",
+    "ticker": "FER",
+    "isin": "NL0015000F07",
+    "country": "ES",
+    "exchange": "BME",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.ferrovial.com/en/investors"
+  },
+  {
+    "name": "Mundys",
+    "ticker": "N/A",
+    "isin": "IT0005534075",
+    "country": "IT",
+    "exchange": "BIT",
+    "sector": "infrastructure",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.mundys.com/en/investors"
+  },
+  {
+    "name": "Thales",
+    "ticker": "HO",
+    "isin": "FR0000121329",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.thalesgroup.com/en/investors"
+  },
+  {
+    "name": "Safran",
+    "ticker": "SAF",
+    "isin": "FR0000073272",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.safran-group.com/investors"
+  },
+  {
+    "name": "Airbus",
+    "ticker": "AIR",
+    "isin": "NL0000235190",
+    "country": "NL",
+    "exchange": "EPA",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.airbus.com/en/investors"
+  },
+  {
+    "name": "Dassault Aviation",
+    "ticker": "AM",
+    "isin": "FR0000121725",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.dassault-aviation.com/en/finance"
+  },
+  {
+    "name": "Rheinmetall",
+    "ticker": "RHM",
+    "isin": "DE0007030009",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.rheinmetall.com/en/investor-relations"
+  },
+  {
+    "name": "Leonardo",
+    "ticker": "LDO",
+    "isin": "IT0003856405",
+    "country": "IT",
+    "exchange": "BIT",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.leonardocompany.com/en/investors"
+  },
+  {
+    "name": "Saab",
+    "ticker": "SAAB.B",
+    "isin": "SE0000112385",
+    "country": "SE",
+    "exchange": "STO",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.saab.com/investor-relations"
+  },
+  {
+    "name": "Hensoldt",
+    "ticker": "HAG",
+    "isin": "DE000HAG0005",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.hensoldt.net/investors"
+  },
+  {
+    "name": "Renk Group",
+    "ticker": "R3NK",
+    "isin": "DE000RENK730",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "defense_aerospace",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.renk-group.com/investors"
+  },
+  {
+    "name": "Aéroports de Paris (ADP)",
+    "ticker": "ADP",
+    "isin": "FR0010340141",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "airports",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.groupeadp.fr/en/investors"
+  },
+  {
+    "name": "AENA",
+    "ticker": "AENA",
+    "isin": "ES0105046009",
+    "country": "ES",
+    "exchange": "BME",
+    "sector": "airports",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.aena.es/en/investors.html"
+  },
+  {
+    "name": "Copenhagen Airports",
+    "ticker": "KBHL",
+    "isin": "DK0010244425",
+    "country": "DK",
+    "exchange": "CPH",
+    "sector": "airports",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.cph.dk/en/cph-group/investor-relations"
+  },
+  {
+    "name": "Fraport",
+    "ticker": "FRA",
+    "isin": "DE0005773303",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "airports",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.fraport.com/en/investors.html"
+  },
+  {
+    "name": "Air France-KLM",
+    "ticker": "AF",
+    "isin": "FR0000031122",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "airlines",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.airfranceklm.com/en/finance"
+  },
+  {
+    "name": "IAG",
+    "ticker": "IAG",
+    "isin": "ES0177542018",
+    "country": "ES",
+    "exchange": "LSE",
+    "sector": "airlines",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.iairgroup.com/en/investors"
+  },
+  {
+    "name": "Lufthansa Group",
+    "ticker": "LHA",
+    "isin": "DE0008232125",
+    "country": "DE",
+    "exchange": "XETR",
+    "sector": "airlines",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://investor-relations.lufthansagroup.com"
+  },
+  {
+    "name": "Ryanair",
+    "ticker": "RYA",
+    "isin": "IE00BYTBXV33",
+    "country": "IE",
+    "exchange": "LSE",
+    "sector": "airlines",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://investor.ryanair.com"
+  },
+  {
+    "name": "EasyJet",
+    "ticker": "EZJ",
+    "isin": "GB00B7KR2P84",
+    "country": "GB",
+    "exchange": "LSE",
+    "sector": "airlines",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://corporate.easyjet.com/investors"
+  },
+  {
+    "name": "CALC (China Aircraft Leasing)",
+    "ticker": "1848",
+    "isin": "HK0000049939",
+    "country": "HK",
+    "exchange": "HKEX",
+    "sector": "aircraft_leasing",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.calc.hk/en/ir"
+  },
+  {
+    "name": "BOC Aviation",
+    "ticker": "2588",
+    "isin": "SG9999015267",
+    "country": "SG",
+    "exchange": "HKEX",
+    "sector": "aircraft_leasing",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.bocaviation.com/en/investor-relations"
+  },
+  {
+    "name": "Air Lease Corporation",
+    "ticker": "AL",
+    "isin": "US00912X3026",
+    "country": "US",
+    "exchange": "NYSE",
+    "sector": "aircraft_leasing",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001487712"
+  },
+  {
+    "name": "AerCap Holdings",
+    "ticker": "AER",
+    "isin": "IE00BFRT3W74",
+    "country": "IE",
+    "exchange": "NYSE",
+    "sector": "aircraft_leasing",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001378789"
+  },
+  {
+    "name": "Antin Infrastructure Partners",
+    "ticker": "ANTIN",
+    "isin": "FR0014005AL0",
+    "country": "FR",
+    "exchange": "EPA",
+    "sector": "infrastructure_funds",
+    "fetch_strategy": [
+      "amf",
+      "ir_scrape"
+    ],
+    "ir_url": "https://www.antin-ip.com/en/investors"
+  },
+  {
+    "name": "3i Group",
+    "ticker": "III",
+    "isin": "GB00B1YW4409",
+    "country": "GB",
+    "exchange": "LSE",
+    "sector": "infrastructure_funds",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.3i.com/investor-relations"
+  },
+  {
+    "name": "Brookfield Infrastructure Partners",
+    "ticker": "BIP",
+    "isin": "BMG162521014",
+    "country": "BM",
+    "exchange": "NYSE",
+    "sector": "infrastructure_funds",
+    "fetch_strategy": [
+      "sec_edgar"
+    ],
+    "sec_cik": "0001406234"
+  },
+  {
+    "name": "Ocean Yield",
+    "ticker": "N/A",
+    "isin": "BMG6687R1083",
+    "country": "BM",
+    "exchange": "OSE",
+    "sector": "shipping_leasing",
+    "fetch_strategy": [
+      "ir_scrape",
+      "yahoo_finance"
+    ],
+    "ir_url": "https://www.oceanyield.no/investors"
+  }
+]

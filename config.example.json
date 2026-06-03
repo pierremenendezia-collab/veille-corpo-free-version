@@ -1,0 +1,19 @@
+{
+  "gemini": {
+    "api_key": "TON_API_KEY_GEMINI",
+    "model": "gemini-flash-lite-latest"
+  },
+  "email": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "sender": "ton_email@gmail.com",
+    "app_password": "xxxx xxxx xxxx xxxx",
+    "recipient": "destinataire@gmail.com"
+  },
+  "schedule": {
+    "lookback_days": 2,
+    "min_interest_daily": 2,
+    "min_interest_weekly": 2,
+    "weekly_recap_weekday": 4
+  }
+}
