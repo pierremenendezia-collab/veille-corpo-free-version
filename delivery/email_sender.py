@@ -34,6 +34,18 @@ TAG_LABELS = {
 
 
 def load_config() -> dict:
+    """Charge la config email. Priorité aux variables d'environnement (GitHub Actions)."""
+    import os
+    # Si env vars présentes (GitHub Actions), on les utilise
+    if os.environ.get("GMAIL_SENDER") and os.environ.get("GMAIL_APP_PASSWORD"):
+        return {
+            "smtp_server": "smtp.gmail.com",
+            "smtp_port": 587,
+            "sender": os.environ["GMAIL_SENDER"],
+            "app_password": os.environ["GMAIL_APP_PASSWORD"],
+            "recipient": os.environ.get("GMAIL_RECIPIENT", os.environ["GMAIL_SENDER"]),
+        }
+    # Sinon, on lit config.json (local)
     return json.loads(CONFIG_FILE.read_text())["email"]
 
 

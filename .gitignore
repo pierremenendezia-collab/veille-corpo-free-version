@@ -2,7 +2,9 @@
 config.json
 
 # --- Données générées ---
-outputs/
+# On garde results.json et digest.md (pour récap hebdo et historique)
+# Mais on exclut les HTML bruts (volumineux et inutiles, l'URL SEC reste valide)
+outputs/**/raw/
 cron.log
 
 # --- Python ---

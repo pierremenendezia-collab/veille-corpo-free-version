@@ -31,7 +31,7 @@ def _get_api_key() -> str | None:
 
 _api_key = _get_api_key()
 _cfg = _load_gemini_config()
-MODEL = _cfg.get("model", "gemini-2.0-flash")
+MODEL = os.environ.get("GEMINI_MODEL") or _cfg.get("model") or "gemini-flash-lite-latest"
 client = genai.Client(api_key=_api_key) if _api_key else None
 
 
