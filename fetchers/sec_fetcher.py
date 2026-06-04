@@ -221,9 +221,10 @@ def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
                     clean = re.sub(r"\s+", " ", clean).strip()
                     result["text_preview"] = clean[:500]
 
-                    # Sauvegarde locale
+                    # Sauvegarde locale (on nettoie aussi le form : "SC 13D/A" contient un slash)
                     safe_name = re.sub(r"[^\w]", "_", company["name"])
-                    filename = f"{filing['date']}_{filing['form']}_{safe_name}.html"
+                    safe_form = re.sub(r"[^\w]", "_", filing["form"])
+                    filename = f"{filing['date']}_{safe_form}_{safe_name}.html"
                     local_path = out_dir / filename
                     local_path.write_text(text, encoding="utf-8")
                     result["local_file"] = str(local_path)
