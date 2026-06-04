@@ -26,7 +26,27 @@ HEADERS = {
     "Accept-Encoding": "gzip, deflate",
 }
 
-FILING_TYPES_WATCHED = {"8-K", "10-K", "10-Q", "6-K", "20-F"}
+FILING_TYPES_WATCHED = {
+    # Rapports périodiques
+    "8-K", "10-K", "10-Q", "6-K", "20-F",
+    # Signaux M&A / opérations stratégiques
+    "SC 13D", "SC 13D/A",   # prise de participation >5% avec intention active
+    "S-4", "F-4",           # opération par échange d'actions (fusion)
+    "PREM14A", "DEFM14A",   # convocation d'AG pour approuver une fusion
+}
+
+# Formulaires qui sont, par nature, des signaux M&A / stratégiques
+MA_SIGNAL_FORMS = {"SC 13D", "SC 13D/A", "S-4", "F-4", "PREM14A", "DEFM14A"}
+
+# Mots-clés pour repérer un communiqué de résultats dans un 6-K
+# (les Foreign Private Issuers n'ont pas de système d'items comme les 8-K)
+EARNINGS_KEYWORDS_6K = [
+    "net income", "net profit", "net loss", "revenue", "ebitda",
+    "earnings per share", "per share", "operating income",
+    "first quarter", "second quarter", "third quarter", "fourth quarter",
+    "interim results", "financial results", "quarterly results",
+    "half-year", "full year results",
+]
 
 BASE_DIR = Path(__file__).parent.parent
 OUTPUT_DIR = BASE_DIR / "outputs"
@@ -132,6 +152,17 @@ def get_8k_items(text: str) -> list[str]:
     return list(set(items))
 
 
+def looks_like_earnings_6k(text: str) -> bool:
+    """
+    6-K : les Foreign Private Issuers (shipping MH/BM, etc.) déposent leurs
+    résultats trimestriels en 6-K, sans système d'items. On détecte donc le
+    communiqué de résultats par mots-clés (>= 2 occurrences pour limiter le bruit).
+    """
+    low = text.lower()
+    hits = sum(1 for kw in EARNINGS_KEYWORDS_6K if kw in low)
+    return hits >= 2
+
+
 def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
     """
     Point d'entrée principal.
@@ -166,6 +197,7 @@ def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
                 "url": filing["url"],
                 "index_url": filing["index_url"],
                 "is_earnings": False,
+                "is_ma_signal": filing["form"] in MA_SIGNAL_FORMS,
                 "8k_items": [],
                 "text_preview": "",
                 "local_file": "",
@@ -174,11 +206,15 @@ def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
             if download_docs and filing["primary_doc"].endswith((".htm", ".html", ".txt")):
                 text = fetch_document_text(filing["url"])
                 if text:
-                    # Détecte si c'est un earnings call (8-K item 2.02)
+                    # Détection earnings selon le type d'émetteur
                     if filing["form"] == "8-K":
+                        # Domestic : earnings = 8-K item 2.02
                         items = get_8k_items(text)
                         result["8k_items"] = items
                         result["is_earnings"] = "2.02" in items
+                    elif filing["form"] == "6-K":
+                        # FPI : pas d'items, détection par contenu
+                        result["is_earnings"] = looks_like_earnings_6k(text)
 
                     # Extrait un aperçu des 500 premiers caractères de texte brut
                     clean = re.sub(r"<[^>]+>", " ", text)

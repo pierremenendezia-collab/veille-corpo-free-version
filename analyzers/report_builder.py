@@ -26,6 +26,8 @@ def score_filing(result: dict) -> int:
     score = 0
     text = (result.get("text_preview", "") + " " + result.get("description", "")).lower()
 
+    if result.get("is_ma_signal"):
+        score += 12
     if result.get("is_earnings"):
         score += 10
     if result.get("form") in ("10-K", "20-F"):
@@ -55,7 +57,8 @@ def build_digest(results: list[dict]) -> str:
     # Tri par score décroissant
     sorted_results = sorted(results, key=score_filing, reverse=True)
 
-    earnings = [r for r in sorted_results if r.get("is_earnings")]
+    ma_signals = [r for r in sorted_results if r.get("is_ma_signal")]
+    earnings = [r for r in sorted_results if r.get("is_earnings") and not r.get("is_ma_signal")]
     annual = [r for r in sorted_results if r.get("form") in ("10-K", "20-F")]
     quarterly = [r for r in sorted_results if r.get("form") in ("10-Q", "6-K") and not r.get("is_earnings")]
     other_8k = [r for r in sorted_results if r.get("form") == "8-K" and not r.get("is_earnings")]
@@ -81,6 +84,11 @@ def build_digest(results: list[dict]) -> str:
             f"- **Aperçu** : {preview}..." if preview else "",
             "",
         ]
+
+    if ma_signals:
+        lines += [f"## Signaux M&A / Prises de participation ({len(ma_signals)})", ""]
+        for r in ma_signals:
+            lines += format_filing(r)
 
     if earnings:
         lines += [f"## Earnings Calls / Résultats ({len(earnings)})", ""]

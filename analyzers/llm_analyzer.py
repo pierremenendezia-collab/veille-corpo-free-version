@@ -35,8 +35,20 @@ MODEL = os.environ.get("GEMINI_MODEL") or _cfg.get("model") or "gemini-flash-lit
 client = genai.Client(api_key=_api_key) if _api_key else None
 
 
-ANALYSIS_PROMPT = """Document SEC ({form_type}) de {company} ({ticker}, {sector}).
+# Contexte injecté dans le prompt pour les formulaires structurellement M&A,
+# afin que Gemini ne les sous-classe pas en ADMIN.
+FORM_CONTEXT = {
+    "SC 13D":   "Déclaration de prise de participation >5% avec intention active — signal M&A/activiste FORT.",
+    "SC 13D/A": "Évolution d'une prise de participation active — signal M&A/activiste.",
+    "S-4":      "Enregistrement d'une fusion par échange d'actions — signal M&A.",
+    "F-4":      "Enregistrement d'une fusion par échange d'actions (émetteur étranger) — signal M&A.",
+    "PREM14A":  "Projet de convocation d'AG pour approuver une fusion — signal M&A.",
+    "DEFM14A":  "Convocation définitive d'AG pour approuver une fusion — signal M&A.",
+}
 
+
+ANALYSIS_PROMPT = """Document SEC ({form_type}) de {company} ({ticker}, {sector}).
+{form_context}
 {text}
 
 Réponds en français avec EXACTEMENT cette structure (3 lignes maximum) :
@@ -76,8 +88,11 @@ def analyze_filing(result: dict) -> str:
     if client is None:
         return "Analyse indisponible — configure GEMINI_API_KEY ou gemini.api_key dans config.json"
 
+    form = result.get("form", "")
+    form_context = f"Contexte : {FORM_CONTEXT[form]}" if form in FORM_CONTEXT else ""
     prompt = ANALYSIS_PROMPT.format(
-        form_type=result.get("form", ""),
+        form_type=form,
+        form_context=form_context,
         company=result.get("company", ""),
         ticker=result.get("ticker", ""),
         sector=result.get("sector", ""),
@@ -163,6 +178,10 @@ def analyze_all(results: list[dict]) -> list[dict]:
             _t.sleep(0.5)
             raw = analyze_filing(result)
             nature, resume, tag = parse_analysis(raw)
+            # Filet de sécurité : un formulaire structurellement M&A (SC 13D, S-4…)
+            # ne doit jamais finir en ADMIN et être filtré de l'email.
+            if result.get("is_ma_signal") and tag in ("ADMIN", ""):
+                tag = "M&A_STRATEGIE"
             result["nature"] = nature
             result["resume"] = resume
             result["tag"] = tag
