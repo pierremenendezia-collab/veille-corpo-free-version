@@ -48,6 +48,22 @@ def score_filing(result: dict) -> int:
     return score
 
 
+def format_strategic(text: str) -> list[str]:
+    """Bloc 'Lecture stratégique' pour le digest markdown (artefact secondaire)."""
+    if not text or "pas de signal prospectif exploitable" in text.lower():
+        return []
+    pretty = (
+        text.replace("SIGNAUX_PROSPECTIFS:", "_Signaux prospectifs :_")
+        .replace("ANTICIPATION:", "_Anticipation :_")
+        .replace("CONVICTION_MANAGEMENT:", "_Conviction management :_")
+    )
+    lines = ["", "**Lecture stratégique**", ""]
+    for raw in pretty.splitlines():
+        if raw.strip():
+            lines.append(raw.rstrip())
+    return lines
+
+
 def build_digest(results: list[dict]) -> str:
     today = date.today().isoformat()
 
@@ -75,15 +91,20 @@ def build_digest(results: list[dict]) -> str:
         if r.get("8k_items"):
             items_str = f" *(Items: {', '.join(r['8k_items'])})*"
         preview = r.get("text_preview", "")[:200].replace("\n", " ")
-        return [
+        lines = [
             f"### {r['company']} (`{r['ticker']}`)",
             f"- **Type** : {r['form']}{items_str}",
             f"- **Date** : {r['date']}",
             f"- **Secteur** : {r.get('sector', 'N/A')}",
             f"- **Document** : [{r['url']}]({r['url']})",
-            f"- **Aperçu** : {preview}..." if preview else "",
-            "",
         ]
+        if r.get("exhibit_url"):
+            lines.append(f"- **Communiqué** : [{r['exhibit_url']}]({r['exhibit_url']})")
+        if preview:
+            lines.append(f"- **Aperçu** : {preview}...")
+        lines += format_strategic(r.get("strategic", ""))
+        lines.append("")
+        return lines
 
     if ma_signals:
         lines += [f"## Signaux M&A / Prises de participation ({len(ma_signals)})", ""]

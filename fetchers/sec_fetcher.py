@@ -146,6 +146,79 @@ def fetch_document_text(url: str) -> str | None:
         return None
 
 
+def get_exhibit_url(cik: str, accession: str, primary_doc: str) -> str | None:
+    """
+    Pour un 6-K / 8-K, le document principal n'est souvent qu'une page de garde
+    quasi vide. Le vrai communiqué de résultats se trouve dans l'exhibit EX-99.1.
+    On lit le listing JSON du dépôt (index.json) pour le retrouver, sinon Gemini
+    analyse une page vide et hallucine.
+    """
+    accession_clean = accession.replace("-", "")
+    base = f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accession_clean}"
+
+    try:
+        r = requests.get(f"{base}/index.json", headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        items = r.json().get("directory", {}).get("item", [])
+    except (requests.RequestException, ValueError) as e:
+        print(f"  [ERREUR] index.json {accession}: {e}")
+        return None
+
+    best = (0, 0, None)        # (score, size, name) — meilleur candidat noté
+    biggest = (0, None)        # (size, name) — plus gros document, filet de sécurité
+    for it in items:
+        name = it.get("name", "")
+        itype = it.get("type", "").upper()
+        low = name.lower()
+        try:
+            size = int(it.get("size") or 0)
+        except (TypeError, ValueError):
+            size = 0
+
+        if not low.endswith((".htm", ".html", ".txt")):
+            continue
+        if name == primary_doc:
+            continue
+        # Bruit à ignorer : page d'index, dump complet de la soumission, rendus XBRL
+        if low.endswith(("-index.html", "-index-headers.html")):
+            continue
+        if re.match(r"\d+-\d+-\d+\.txt$", low):
+            continue
+        if re.match(r"r\d+\.htm", low) or low.endswith(("_cal.htm", "_def.htm", "_lab.htm", "_pre.htm")):
+            continue
+
+        # Le type SEC est parfois fiable, parfois du bruit (ex: "text.gif" partout) :
+        # on combine indices de type ET de nom de fichier, et on garde le meilleur.
+        score = 0
+        if itype == "EX-99.1":
+            score = max(score, 100)
+        elif itype.startswith("EX-99"):
+            score = max(score, 90)
+        elif itype.startswith("EX") and len(itype) > 2:
+            score = max(score, 55)
+        if re.search(r"ex[-_]?99[-_]?1", low):
+            score = max(score, 80)
+        elif re.search(r"ex[-_]?99", low):
+            score = max(score, 70)
+        if any(k in low for k in ("press", "release", "earning")):
+            score = max(score, 60)
+        if re.search(r"ex[-_]?\d", low):
+            score = max(score, 50)
+
+        if (score, size) > (best[0], best[1]):
+            best = (score, size, name)
+        if size > biggest[0]:
+            biggest = (size, name)
+
+    if best[2]:
+        return f"{base}/{best[2]}"
+    # Filet de sécurité : aucun nom/type ne matche, mais le communiqué est toujours
+    # le plus gros document du dépôt. On le prend s'il est assez substantiel.
+    if biggest[1] and biggest[0] >= 3000:
+        return f"{base}/{biggest[1]}"
+    return None
+
+
 def get_8k_items(text: str) -> list[str]:
     """Extrait les numéros d'items d'un 8-K pour identifier les earnings (2.02)."""
     items = re.findall(r"Item\s+(\d+\.\d+)", text, re.IGNORECASE)
@@ -201,23 +274,37 @@ def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
                 "8k_items": [],
                 "text_preview": "",
                 "local_file": "",
+                "exhibit_url": "",
             }
 
             if download_docs and filing["primary_doc"].endswith((".htm", ".html", ".txt")):
                 text = fetch_document_text(filing["url"])
                 if text:
+                    # 6-K / 8-K : le document principal est souvent une simple page de
+                    # garde. Le vrai communiqué de résultats vit dans l'EX-99.1 — on le
+                    # récupère et on l'ajoute au texte analysé, sinon Gemini hallucine.
+                    exhibit_text = ""
+                    if filing["form"] in ("6-K", "8-K"):
+                        ex_url = get_exhibit_url(cik, filing["accession"], filing["primary_doc"])
+                        if ex_url:
+                            exhibit_text = fetch_document_text(ex_url) or ""
+                            if exhibit_text:
+                                result["exhibit_url"] = ex_url
+
+                    full_text = text + ("\n\n" + exhibit_text if exhibit_text else "")
+
                     # Détection earnings selon le type d'émetteur
                     if filing["form"] == "8-K":
-                        # Domestic : earnings = 8-K item 2.02
+                        # Domestic : earnings = 8-K item 2.02 (présent dans la page de garde)
                         items = get_8k_items(text)
                         result["8k_items"] = items
                         result["is_earnings"] = "2.02" in items
                     elif filing["form"] == "6-K":
-                        # FPI : pas d'items, détection par contenu
-                        result["is_earnings"] = looks_like_earnings_6k(text)
+                        # FPI : pas d'items, détection par contenu (texte complet + exhibit)
+                        result["is_earnings"] = looks_like_earnings_6k(full_text)
 
                     # Extrait un aperçu des 500 premiers caractères de texte brut
-                    clean = re.sub(r"<[^>]+>", " ", text)
+                    clean = re.sub(r"<[^>]+>", " ", full_text)
                     clean = re.sub(r"\s+", " ", clean).strip()
                     result["text_preview"] = clean[:500]
 
@@ -226,7 +313,7 @@ def run(lookback_days: int = 2, download_docs: bool = True) -> list[dict]:
                     safe_form = re.sub(r"[^\w]", "_", filing["form"])
                     filename = f"{filing['date']}_{safe_form}_{safe_name}.html"
                     local_path = out_dir / filename
-                    local_path.write_text(text, encoding="utf-8")
+                    local_path.write_text(full_text, encoding="utf-8")
                     result["local_file"] = str(local_path)
 
             results.append(result)

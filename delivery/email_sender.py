@@ -78,6 +78,71 @@ def group_by_company(results: list[dict]) -> list[dict]:
     return sorted(grouped.values(), key=lambda g: g["best_priority"])
 
 
+def _clean_inline(s: str) -> str:
+    """Texte issu de Gemini → sûr en HTML : enlève le gras markdown, échappe < > &."""
+    s = re.sub(r"\*\*(.+?)\*\*", r"\1", s).replace("*", "")
+    s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    return s.strip()
+
+
+def _parse_strategic(text: str) -> tuple[list[str], str, str]:
+    """Découpe la réponse stratégique en (signaux, anticipation, conviction)."""
+    signals: list[str] = []
+    m = re.search(r"SIGNAUX_PROSPECTIFS\s*:\s*(.*?)(?=ANTICIPATION\s*:|CONVICTION_MANAGEMENT\s*:|\Z)",
+                  text, re.IGNORECASE | re.DOTALL)
+    if m:
+        for line in m.group(1).splitlines():
+            line = line.strip().lstrip("-•*").strip()
+            if line:
+                signals.append(line)
+
+    anticipation = ""
+    m = re.search(r"ANTICIPATION\s*:\s*(.*?)(?=CONVICTION_MANAGEMENT\s*:|\Z)", text, re.IGNORECASE | re.DOTALL)
+    if m:
+        anticipation = m.group(1).strip()
+        if anticipation.upper().strip("[]. ") == "N/A":
+            anticipation = ""
+
+    conviction = ""
+    m = re.search(r"CONVICTION_MANAGEMENT\s*:\s*(.+?)(?:\n|$)", text, re.IGNORECASE)
+    if m:
+        conviction = m.group(1).strip().strip("[]").strip()
+        if conviction.upper() == "N/A":
+            conviction = ""
+
+    return signals, anticipation, conviction
+
+
+def render_strategic(text: str) -> str:
+    """Encart 'Lecture stratégique' (signaux prospectifs + anticipation + conviction).
+    Renvoie "" si rien d'exploitable, pour ne pas alourdir l'email."""
+    if not text or not text.strip():
+        return ""
+
+    signals, anticipation, conviction = _parse_strategic(text)
+    if signals and "pas de signal" in signals[0].lower() and not anticipation:
+        return ""
+    if not signals and not anticipation and not conviction:
+        return ""
+
+    bullets = "".join(f'<li style="margin:3px 0">{_clean_inline(s)}</li>' for s in signals)
+    parts = []
+    if bullets:
+        parts.append(f'<ul style="margin:4px 0;padding-left:18px;color:#2d3748;font-size:13px;line-height:1.5">{bullets}</ul>')
+    if anticipation:
+        parts.append(f'<div style="font-size:12px;color:#4a5568;margin-top:6px"><strong style="color:#1a365d">Anticipation :</strong> {_clean_inline(anticipation)}</div>')
+    if conviction:
+        cv_first = conviction.split()[0].lower().strip("():,.") if conviction.split() else ""
+        cv_color = {"haute": "#2f855a", "moyenne": "#dd6b20", "faible": "#a0aec0"}.get(cv_first, "#718096")
+        parts.append(f'<div style="font-size:12px;color:#4a5568;margin-top:3px"><strong style="color:#1a365d">Conviction management :</strong> <span style="color:{cv_color};font-weight:600">{_clean_inline(conviction)}</span></div>')
+
+    return f"""
+      <div style="margin-top:10px;padding:12px 14px;background:#f0f5fa;border-radius:6px;border:1px dashed #bcccdc">
+        <div style="font-size:11px;color:#1a365d;text-transform:uppercase;letter-spacing:0.5px;font-weight:700;margin-bottom:4px">Lecture stratégique</div>
+        {''.join(parts)}
+      </div>"""
+
+
 def build_publication_item(r: dict) -> str:
     """Sous-élément à l'intérieur d'une carte entreprise."""
     nature = r.get("nature", "—")
@@ -88,6 +153,12 @@ def build_publication_item(r: dict) -> str:
     form = r.get("form", "")
     items_8k = r.get("8k_items", [])
     items_str = f" · Items {', '.join(items_8k)}" if items_8k else ""
+    strategic_html = render_strategic(r.get("strategic", ""))
+
+    link_style = "color:#3182ce;font-size:11px;text-decoration:none"
+    links = f'<a href="{r["url"]}" style="{link_style}">→ Document SEC</a>'
+    if r.get("exhibit_url"):
+        links += f'&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{r["exhibit_url"]}" style="{link_style}">→ Communiqué complet</a>'
 
     return f"""
     <div style="border-left:3px solid {color};padding:14px 18px;margin:12px 0;background:#fafafa;border-radius:0 6px 6px 0">
@@ -97,7 +168,8 @@ def build_publication_item(r: dict) -> str:
       </div>
       <div style="font-size:14px;color:#2d3748;font-weight:600;margin-bottom:6px">{nature}</div>
       <div style="color:#4a5568;font-size:13px;line-height:1.6">{resume}</div>
-      <div style="margin-top:8px"><a href="{r['url']}" style="color:#3182ce;font-size:11px;text-decoration:none">→ Document SEC</a></div>
+      {strategic_html}
+      <div style="margin-top:8px">{links}</div>
     </div>"""
 
 

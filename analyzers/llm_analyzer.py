@@ -58,6 +58,30 @@ RESUME: [2-3 phrases concises résumant l'essentiel. Chiffres clés si présents
 TAG: [Choisis UN seul tag parmi : M&A_STRATEGIE (acquisitions, cessions, partenariats, fusions, strategic review), EARNINGS (résultats financiers significatifs), GUIDANCE (prévisions, outlook), FINANCIER (dividende, émission, rachat actions), MANAGEMENT (changement dirigeant, gouvernance), ADMIN (formalité administrative sans contenu notable))]"""
 
 
+# Seconde passe : « lecture entre les lignes » du discours management. Le premier
+# prompt classe et résume ; celui-ci cherche les signaux PROSPECTIFS qu'un analyste
+# sell-side lirait dans les propos du CEO/CFO. Garde anti-hallucination en fin.
+STRATEGIC_PROMPT = """Tu es analyste sell-side spécialisé transport maritime / logistique / infrastructures.
+Document SEC ({form_type}) de {company} ({ticker}, {sector}).
+
+{text}
+
+Au-delà des chiffres bruts, lis ENTRE LES LIGNES les propos du management (CEO/CFO).
+Réponds en français, UNIQUEMENT dans ce format :
+
+SIGNAUX_PROSPECTIFS:
+- [3 à 5 puces. Chaque puce = un signal concret tourné vers l'avenir : guidance/outlook (et son ton), allocation du capital (dividende, rachat, désendettement, capex), flotte/capacité (commandes, ventes d'actifs, expansion), M&A/consolidation évoquée, vision du cycle/marché. Cite un chiffre ou une formulation du document quand c'est possible.]
+ANTICIPATION: [1-2 phrases : qu'est-ce que ça laisse présager pour les 2-3 prochains trimestres ?]
+CONVICTION_MANAGEMENT: [Haute / Moyenne / Faible — degré d'engagement du discours]
+
+IMPÉRATIF : appuie-toi UNIQUEMENT sur le contenu du document ci-dessus. N'invente aucun chiffre ni citation. Si le document ne contient pas de matière prospective exploitable (page de garde, simple avis, formalité), réponds EXACTEMENT :
+SIGNAUX_PROSPECTIFS:
+- Pas de signal prospectif exploitable dans ce document.
+ANTICIPATION: N/A
+CONVICTION_MANAGEMENT: N/A
+"""
+
+
 def clean_html(html: str) -> str:
     text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL | re.IGNORECASE)
@@ -71,20 +95,40 @@ def truncate_for_analysis(text: str, max_chars: int = 50000) -> str:
     return text[:max_chars] if len(text) > max_chars else text
 
 
-def analyze_filing(result: dict) -> str:
+def _generate_with_retry(prompt: str) -> str:
+    """Appel Gemini avec backoff pour absorber les 503/429 (surcharge du free tier)."""
     import time as _time
 
+    last_error = None
+    for attempt, delay in enumerate([0, 3, 8, 20]):
+        if delay:
+            _time.sleep(delay)
+        try:
+            return client.models.generate_content(model=MODEL, contents=prompt).text
+        except Exception as e:
+            last_error = e
+            msg = str(e)
+            if "503" in msg or "429" in msg or "UNAVAILABLE" in msg or "RESOURCE_EXHAUSTED" in msg:
+                print(f"    retry {attempt + 1}/4 après {delay}s ({msg[:60]}...)")
+                continue
+            raise
+    raise last_error
+
+
+def _load_doc_text(result: dict) -> str | None:
+    """Lit le document local, nettoie le HTML et tronque. None si absent/trop court."""
     local_file = result.get("local_file", "")
     if not local_file or not Path(local_file).exists():
-        return "Document non disponible localement."
-
+        return None
     raw_html = Path(local_file).read_text(encoding="utf-8", errors="ignore")
-    text = clean_html(raw_html)
-    text = truncate_for_analysis(text)
+    text = truncate_for_analysis(clean_html(raw_html))
+    return text if len(text) >= 100 else None
 
-    if len(text) < 100:
-        return "Document trop court ou vide."
 
+def analyze_filing(result: dict) -> str:
+    text = _load_doc_text(result)
+    if text is None:
+        return "Document non disponible ou trop court."
     if client is None:
         return "Analyse indisponible — configure GEMINI_API_KEY ou gemini.api_key dans config.json"
 
@@ -98,24 +142,33 @@ def analyze_filing(result: dict) -> str:
         sector=result.get("sector", ""),
         text=text,
     )
+    return _generate_with_retry(prompt)
 
-    # Retry avec backoff pour gérer les 503/429 (surcharge Gemini)
-    last_error = None
-    for attempt, delay in enumerate([0, 3, 8, 20]):
-        if delay:
-            _time.sleep(delay)
-        try:
-            response = client.models.generate_content(model=MODEL, contents=prompt)
-            return response.text
-        except Exception as e:
-            last_error = e
-            msg = str(e)
-            if "503" in msg or "429" in msg or "UNAVAILABLE" in msg or "RESOURCE_EXHAUSTED" in msg:
-                print(f"    retry {attempt + 1}/4 après {delay}s ({msg[:60]}...)")
-                continue
-            raise
 
-    raise last_error
+def strategic_analysis(result: dict) -> str:
+    """
+    Seconde passe « lecture entre les lignes » : signaux prospectifs du discours
+    management (guidance et son ton, allocation du capital, flotte/capacité, M&A
+    évoquée, vision du cycle). Renvoie "" en cas d'échec ou de document
+    inexploitable — c'est une passe d'appoint qui ne doit jamais casser le pipeline.
+    """
+    if client is None:
+        return ""
+    text = _load_doc_text(result)
+    if text is None:
+        return ""
+    prompt = STRATEGIC_PROMPT.format(
+        form_type=result.get("form", ""),
+        company=result.get("company", ""),
+        ticker=result.get("ticker", ""),
+        sector=result.get("sector", ""),
+        text=text,
+    )
+    try:
+        return _generate_with_retry(prompt).strip()
+    except Exception as e:
+        print(f"    [strat ERREUR] {str(e)[:60]}", flush=True)
+        return ""
 
 
 VALID_TAGS = {
@@ -171,6 +224,7 @@ def analyze_all(results: list[dict]) -> list[dict]:
             result["resume"] = ""
             result["tag"] = ""
             result["priority"] = 99
+            result["strategic"] = ""
             continue
 
         print(f"  [{i+1}/{len(to_analyze)}] {result['company']} — {result['form']}...", flush=True)
@@ -186,12 +240,16 @@ def analyze_all(results: list[dict]) -> list[dict]:
             result["resume"] = resume
             result["tag"] = tag
             result["priority"] = TAG_PRIORITY.get(tag, 9)
-            print(f"    → [{tag}] {nature}", flush=True)
+            # Lecture stratégique « entre les lignes » sur tout document substantiel.
+            result["strategic"] = strategic_analysis(result) if tag and tag != "ADMIN" else ""
+            extra = " +strat" if result["strategic"] else ""
+            print(f"    → [{tag}]{extra} {nature}", flush=True)
         except Exception as e:
             print(f"  [ERREUR] {e}", flush=True)
             result["nature"] = "Erreur d'analyse"
             result["resume"] = ""
             result["tag"] = "ADMIN"
             result["priority"] = 99
+            result["strategic"] = ""
 
     return results
