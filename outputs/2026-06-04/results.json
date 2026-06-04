@@ -4,22 +4,67 @@
     "ticker": "GNK",
     "sector": "shipping_dry_bulk",
     "date": "2026-06-02",
+    "form": "SC 13D/A",
+    "description": "SC TO-T/A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326200/000110465926069466/tm2612953d29_sctota.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1326200&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-069466",
+    "is_earnings": false,
+    "is_ma_signal": true,
+    "8k_items": [],
+    "text_preview": "SC TO-T/A 1 tm2612953d29_sctota.htm SC TO-T/A &nbsp; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; SCHEDULE TO Tender Offer Statement under Section 14(d)(1) or 13(e)(1) of the Securities Exchange Act of 1934 (Amendment No. 8) &nbsp; Genco Shipping &amp; Trading Limited (Name of Subject Company (Issuer)) &nbsp; 4 Dragon Merger Sub Inc. (Offeror) a direct wholly owned subsidiary of &nbsp; Diana Shipping Inc. (Parent of Offeror) (Names of Filing Persons (identifying",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_SC_13D_A_Genco_Shipping___Trading.html",
+    "exhibit_url": "",
+    "nature": "Mise à jour offre publique d'achat.",
+    "resume": "Diana Shipping maintient son offre hostile à 24,80 $ par action pour acquérir Genco Shipping & Trading. Ce dépôt constitue le 8ème amendement au Schedule TO concernant cette opération de rachat en numéraire représentant une participation de 14,4 %.",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\n\nANTICIPATION: N/A\nCONVICTION_MANAGEMENT: N/A"
+  },
+  {
+    "company": "Genco Shipping & Trading",
+    "ticker": "GNK",
+    "sector": "shipping_dry_bulk",
+    "date": "2026-06-02",
     "form": "8-K",
     "description": "8-K",
     "url": "https://www.sec.gov/Archives/edgar/data/1326200/000114036126023619/ef20075333_8k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1326200&type=&dateb=&owner=include&count=10&search_text=#filing-0001140361-26-023619",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [
-      "1.01",
       "3.03",
-      "9.01"
+      "9.01",
+      "1.01"
     ],
     "text_preview": "false 0001326200 0001326200 2026-06-02 2026-06-02 0001326200 us-gaap:CommonStockMember 2026-06-02 2026-06-02 0001326200 gnk:PreferredStockPurchaseRightsMember 2026-06-02 2026-06-02 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K &#160; CURRENT REPORT &#160;Pursuant to Section 13 OR 15(d) of The Securities Exchange Act of 1934 &#160; Date of Report (Date of earliest event reported): June 2, 2026 &#160; GENCO SHIPPING &amp; TRADING LIMITED (Exact name of registrant",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_8-K_Genco_Shipping___Trading.html",
-    "nature": "Modification du pacte d'actionnaires.",
-    "resume": "Genco Shipping a adopté le 2 juin 2026 un troisième amendement à son \"Shareholder Rights Agreement\". Cette modification supprime la définition de \"Acting in Concert\" tout en conservant les autres clauses de protection contre les prises de contrôle hostiles.",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_8_K_Genco_Shipping___Trading.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1326200/000114036126023619/ef20075333_ex4-1.htm",
+    "nature": "Modification du plan de droits des actionnaires.",
+    "resume": "Genco Shipping & Trading a amendé son \"Shareholder Rights Agreement\" pour supprimer la définition de \"Acting in Concert\". Cette mesure vise à simplifier la gouvernance liée à la protection contre les prises de contrôle non sollicitées.",
     "tag": "MANAGEMENT",
-    "priority": 5
+    "priority": 5,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Gouvernance et flexibilité stratégique :** Le management ajuste son \"Shareholder Rights Agreement\" pour éliminer la définition \"Acting in Concert\", répondant ainsi à un \"feedback des actionnaires\" et cherchant à maintenir un équilibre entre protection contre des accumulations hostiles et préservation de la confiance des investisseurs.\n- **Défense de la valeur à long terme :** Le Board réaffirme sa volonté de prévenir les prises de contrôle rampantes sans \"prime de contrôle appropriée\", tout en précisant que le mécanisme actuel \"ne prévient pas le Board de considérer toute proposition\" jugée juste.\n- **Stabilité de la structure de capital :** Bien que le concept de concertation soit atténué, les dispositions relatives à la formation de groupes (Rule 13d-5(b)(1)) restent inchangées, signalant une volonté de garder un contrôle strict sur la base actionnariale tout en assouplissant légèrement les contraintes de gouvernance.\n- **Continuité opérationnelle :** Le document confirme que les mécanismes de \"Rights Agreement\" (Poison Pill) restent en vigueur, assurant au Board le temps nécessaire pour remplir ses \"fiduciary duties\" en cas d'offre potentielle, sans intention de bloquer des offres jugées dans l'intérêt des actionnaires.\n\nANTICIPATION: Ce mouvement suggère que le management cherche à apaiser les pressions des actionnaires activistes ou institutionnels avant les prochains trimestres, tout en sanctuarisant un mécanisme de défense robuste en cas d'offre de rachat non sollicitée dans un marché du dry bulk potentiellement volatil.\n\nCONVICTION_MANAGEMENT: Haute (Le Board a agi proactivement via trois amendements successifs depuis octobre 2025 pour affiner sa stratégie de défense)."
+  },
+  {
+    "company": "Safe Bulkers",
+    "ticker": "SB",
+    "sector": "shipping_dry_bulk",
+    "date": "2026-06-04",
+    "form": "6-K",
+    "description": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001799/c116505_6k.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1434754&type=&dateb=&owner=include&count=10&search_text=#filing-0000930413-26-001799",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [],
+    "text_preview": "6-K 1 c116505_6k.htm UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; FORM 6-K &nbsp; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13a-16 OR 15d-16 UNDER THE SECURITIES EXCHANGE ACT OF 1934 &nbsp; For June 4, 2026 &nbsp; SAFE BULKERS, INC. (Translation of registrant&rsquo;s name into English) &nbsp; Apt. D11, Les Acanthes 6, Avenue des Citronniers, MC98000 Monaco (Address of principal executive office) &nbsp; Indicate by check mark whether the registrant files ",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-04_6_K_Safe_Bulkers.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001799/c116505_ex-1.htm",
+    "nature": "Déclaration de détention d'actions",
+    "resume": "Safe Bulkers annonce la cotation de ses titres sur Euronext Athènes. Polys Hajioannou contrôle désormais indirectement 47,51 % des droits de vote via six entités actionnaires.",
+    "tag": "ADMIN",
+    "priority": 9,
+    "strategic": ""
   },
   {
     "company": "Safe Bulkers",
@@ -31,13 +76,16 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1434754/000131786126000031/f060226sb6k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1434754&type=&dateb=&owner=include&count=10&search_text=#filing-0001317861-26-000031",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [],
     "text_preview": "6-K 1 f060226sb6k.htm W&amp;C Standard Template UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM 6-K REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13a-16 OR 15d-16 UNDER THE SECURITIES EXCHANGE ACT OF 1934 For the month of June 2026 SAFE BULKERS, INC. (Translation of registrant&#146;s name into English) Apt. D11, Les Acanthes 6, Avenue des Citronniers, MC98000 Monaco (Address of principal executive office) Indicate by check mark whether the registrant files or wil",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6-K_Safe_Bulkers.html",
-    "nature": "Annonce technique cotation Euronext",
-    "resume": "Ce document informe du prix d'ouverture des actions ordinaires de Safe Bulkers, Inc. sur le marché Euronext à Athènes. Il s'agit d'une formalité réglementaire relative à la cotation boursière de la société.",
-    "tag": "ADMIN",
-    "priority": 9
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6_K_Safe_Bulkers.html",
+    "exhibit_url": "",
+    "nature": "Cotation sur Euronext Athens",
+    "resume": "Safe Bulkers annonce l'ouverture de la cotation de ses 101 826 580 actions sur Euronext Athens. Le prix d'ouverture est fixé à 5,70 €, correspondant à la conversion du cours de clôture au NYSE du 1er juin 2026.",
+    "tag": "FINANCIER",
+    "priority": 4,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Expansion de la base d'investisseurs et de la liquidité par la cotation duale sur Euronext Athens : l'annonce officialise l'admission de \"101 826 580\" actions ordinaires, visant à renforcer la présence du titre sur le marché européen.\n- Alignement de la valorisation sur le marché global : le prix d'ouverture de \"€5.70\" est indexé sur la clôture du NYSE du 1er juin 2026 ($6.62), démontrant une stratégie de transparence et d'harmonisation de la valeur actionnariale à l'international.\n- Maintien du statut de reporting : confirmation du dépôt régulier des rapports annuels sous forme \"20-F\", assurant une continuité dans la gouvernance et la communication financière exigée par la SEC.\n\nANTICIPATION: Cette double cotation laisse présager une volonté du management d'accroître la liquidité du titre et de diversifier le socle d'actionnaires institutionnels, ce qui pourrait réduire la volatilité liée aux seuls flux des marchés américains sur les deux prochains trimestres.\n\nCONVICTION_MANAGEMENT: Haute"
   },
   {
     "company": "Safe Bulkers",
@@ -49,13 +97,16 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001781/c116498_6k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1434754&type=&dateb=&owner=include&count=10&search_text=#filing-0000930413-26-001781",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [],
     "text_preview": "6-K 1 c116498_6k.htm UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; FORM 6-K &nbsp; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13a-16 OR 15d-16 UNDER THE SECURITIES EXCHANGE ACT OF 1934 &nbsp; For June 2, 2026 &nbsp; SAFE BULKERS, INC. (Translation of registrant&rsquo;s name into English) Apt. D11, Les Acanthes 6, Avenue des Citronniers, MC98000 Monaco (Address of principal executive office) &nbsp; &nbsp; Indicate by check mark whether the registrant files ",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6-K_Safe_Bulkers.html",
-    "nature": "Annonce boursière Euronext Athens",
-    "resume": "Safe Bulkers, Inc. publie une annonce réglementaire concernant le prix d'ouverture de ses actions ordinaires sur la bourse d'Athènes. Ce document administratif officialise le début de cotation à cette date.",
-    "tag": "ADMIN",
-    "priority": 9
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6_K_Safe_Bulkers.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001781/c116498_ex-1.htm",
+    "nature": "Annonce de cotation Euronext Athens",
+    "resume": "Safe Bulkers débute la cotation de ses actions ordinaires sur le marché d'Euronext Athens. Le prix d'ouverture est fixé à 5,70 € par action, correspondant à la conversion du cours de clôture au NYSE du 1er juin 2026.",
+    "tag": "FINANCIER",
+    "priority": 4,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\n\nANTICIPATION: N/A\n\nCONVICTION_MANAGEMENT: N/A"
   },
   {
     "company": "Safe Bulkers",
@@ -67,13 +118,16 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001779/c116496_6k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1434754&type=&dateb=&owner=include&count=10&search_text=#filing-0000930413-26-001779",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [],
     "text_preview": "6-K 1 c116496_6k.htm UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; FORM 6-K &nbsp; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13a-16 OR 15d-16 UNDER THE SECURITIES EXCHANGE ACT OF 1934 &nbsp; For June 2, 2026 &nbsp; SAFE BULKERS, INC. (Translation of registrant&rsquo;s name into English) &nbsp; Apt. D11, Les Acanthes 6, Avenue des Citronniers, MC98000 Monaco (Address of principal executive office) &nbsp; Indicate by check mark whether the registrant files ",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6-K_Safe_Bulkers.html",
-    "nature": "Annonce boursière Euronext Athens.",
-    "resume": "Safe Bulkers informe sur le prix d'ouverture de ses actions ordinaires sur la place boursière d'Athènes. Ce dépôt formel constitue une mise à jour administrative liée à la cotation.",
-    "tag": "ADMIN",
-    "priority": 9
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6_K_Safe_Bulkers.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1434754/000093041326001779/c116496_ex-1.htm",
+    "nature": "Annonce de cotation Euronext Athens",
+    "resume": "Safe Bulkers débute la cotation de ses actions ordinaires sur le marché d'Euronext Athens. Le prix d'ouverture est fixé à 5,70 € par action, basé sur la conversion du cours de clôture au NYSE du 1er juin 2026.",
+    "tag": "FINANCIER",
+    "priority": 4,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Expansion de la base d'investisseurs par la cotation sur Euronext Athens, visant à accroître l'accessibilité des 101 826 580 actions ordinaires sur un second marché réglementé.\n- Maintien d'une structure de capital stable avec un prix d'ouverture fixé à 5,70 € (aligné sur la clôture du NYSE à 6,62 $), reflétant une stratégie de transparence pour les investisseurs européens.\n- Volonté affichée de maintenir une cotation duale (NYSE et Euronext Athens) pour soutenir la liquidité du titre.\n- Gestion opérationnelle prudente, le management soulignant des incertitudes inhérentes à la logistique du \"cross-border trading\" tout en poursuivant ses objectifs de présence internationale.\n\nANTICIPATION: Cette double cotation suggère une volonté de capter un flux de capitaux européens pour soutenir la valorisation du titre et pourrait précéder une période de reporting plus accrue sur les standards financiers européens dans les prochains trimestres.\n\nCONVICTION_MANAGEMENT: Moyenne"
   },
   {
     "company": "Torm",
@@ -84,14 +138,17 @@
     "description": "CURRENT REPORT OF FOREIGN ISSUER PURSUANT TO RULES 13A-16 AND 15D-16 AMENDMENTS",
     "url": "https://www.sec.gov/Archives/edgar/data/1655891/000091957426003796/d12172407_6-k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1655891&type=&dateb=&owner=include&count=10&search_text=#filing-0000919574-26-003796",
-    "is_earnings": false,
+    "is_earnings": true,
+    "is_ma_signal": false,
     "8k_items": [],
     "text_preview": "6-K 1 d12172407_6-k.htm CURRENT REPORT OF FOREIGN ISSUER PURSUANT TO RULES 13A-16 AND 15D-16 AMENDMENTS &#xa0; &#xa0; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C.&#xa0;&#xa0;20549 &#xa0; FORM 6-K &#xa0; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13A-16 OR 15D-16 OF THE SECURITIES EXCHANGE ACT OF 1934 &#xa0; For the month of June 2026 &#xa0; Commission File Number 001-38294 &#xa0; TORM plc &#xa0; 4th&#xa0;Floor, 120 Cannon Street, London, EC4N 6AS, United Kingdom &#xa0",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6-K_Torm.html",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_6_K_Torm.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1655891/000091957426003796/d12172407_ex99-1.htm",
     "nature": "Augmentation du capital social",
-    "resume": "TORM plc a émis 28 144 nouvelles actions ordinaires de classe A. Cette augmentation résulte de l'exercice d'un nombre équivalent d'unités d'actions restreintes (RSU).",
+    "resume": "TORM plc a augmenté son capital social de 28 144 actions A suite à l'exercice d'unités d'actions restreintes (RSU). Le nombre total d'actions en circulation s'élève désormais à 102 367 118 unités.",
     "tag": "FINANCIER",
-    "priority": 4
+    "priority": 4,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Allocation du capital et incitation :** Confirmation de la poursuite des programmes d'intéressement (RSUs) avec une dilution marginale actée (28 144 actions), témoignant d'une politique de rétention des talents active malgré la cyclicité.\n- **Vision du marché (Prudence affichée) :** Le management souligne explicitement dans son « Safe Harbor Statement » que la cyclicité de l'industrie reste un facteur de risque majeur, mentionnant une vigilance sur « les fluctuations des taux d'affrètement » et « les capacités des affréteurs à remplir leurs obligations ».\n- **Facteurs exogènes à surveiller :** Le management identifie comme variables prospectives critiques le conflit en mer Rouge (« les attaques des Houthis »), l'évolution des sanctions contre le pétrole russe, et l'incertitude liée aux politiques commerciales (tarifs/importations) post-élections américaines.\n- **Gestion des risques opérationnels :** Accent mis sur la résilience opérationnelle face aux menaces cybernétiques, aux tensions géopolitiques et aux réglementations environnementales, jugés comme des facteurs pouvant faire dévier les résultats des objectifs fixés.\n\nANTICIPATION: Ce document, bien qu'essentiellement administratif, confirme une gestion rigoureuse et standardisée de la structure du capital. Pour les prochains trimestres, le management adopte une posture défensive, soulignant que la performance future est fortement dépendante de variables géopolitiques imprévisibles, ce qui suggère une communication prudente lors des prochains rapports trimestriels.\n\nCONVICTION_MANAGEMENT: Moyenne (le discours est structuré autour d'une gestion prudente des risques dans un environnement incertain)."
   },
   {
     "company": "XPO",
@@ -103,16 +160,19 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926070109/tm2616097d2_8k.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1166003&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-070109",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [
-      "9.01",
-      "7.01"
+      "7.01",
+      "9.01"
     ],
     "text_preview": "false 0001166003 0001166003 2026-06-03 2026-06-03 iso4217:USD xbrli:shares iso4217:USD xbrli:shares &#160; &#160; &#160; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &#160; FORM 8-K &#160; CURRENT REPORT Pursuant to Section&#160;13 or 15(d) of the Securities Exchange Act of 1934 &#160; Date of Report (Date of earliest event reported): June 3, 2026 &#160; XPO, INC. (Exact name of registrant as specified in its charter) &#160; &#160; Delaware &#160; &#160; 001-32172 &#16",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-03_8-K_XPO.html",
-    "nature": "Publication des métriques opérationnelles mensuelles",
-    "resume": "XPO publie ses données opérationnelles pour le segment LTL nord-américain. En avril 2026, le tonnage quotidien a diminué de 1,5 % sur un an, reflétant une hausse de 0,2 % des expéditions contre une baisse de 1,7 % du poids par expédition.",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-03_8_K_XPO.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1166003/000110465926070109/tm2616097d2_ex99-1.htm",
+    "nature": "Publication de mesures opérationnelles mensuelles",
+    "resume": "XPO publie ses données LTL pour mai 2026, marquées par une hausse de 0,5 % du tonnage journalier et de 3,3 % des expéditions. Le rapport détaille également les résultats définitifs pour avril 2026, avec une baisse de 1,5 % du tonnage par jour.",
     "tag": "EARNINGS",
-    "priority": 2
+    "priority": 2,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Dynamique de volume :** Le management souligne une amélioration séquentielle, passant d'une baisse du tonnage de 1,5 % en avril à une hausse de 0,5 % en mai 2026, portée par une accélération marquée du nombre de shipments (+3,3 % en mai contre +0,2 % en avril).\n- **Gestion de la productivité et réseau :** La direction maintient une volonté stratégique de poursuivre « l'insourcing linehaul » (internalisation du transport longue distance) pour « améliorer l'efficacité et la productivité du réseau ».\n- **Stratégie de croissance et yield :** Le management met l'accent sur sa capacité à « capturer des parts de marché rentables, faciliter la croissance du rendement (yield) et améliorer les marges lors d'un cycle de hausse (upcycle) ».\n- **Allocation du capital :** Le document réaffirme explicitement la flexibilité sur le rachat d'actions (« our ability to repurchase shares on favorable terms ») et le maintien d'une gestion active de l'endettement.\n- **Investissements opérationnels :** Le management confirme sa priorité d'aligner ses investissements en capital (équipements, centres de service, entrepôts) sur la demande des clients.\n\nANTICIPATION: La tendance de mai suggère un point d'inflexion positif dans le trafic LTL. Si la hausse du nombre de shipments se maintient, les prochains trimestres devraient refléter une amélioration des marges grâce au levier opérationnel et à la montée en puissance de l'internalisation du linehaul.\n\nCONVICTION_MANAGEMENT: Haute"
   },
   {
     "company": "C.H. Robinson",
@@ -124,15 +184,18 @@
     "url": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000023/chrw-20260529.htm",
     "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1043277&type=&dateb=&owner=include&count=10&search_text=#filing-0001043277-26-000023",
     "is_earnings": false,
+    "is_ma_signal": false,
     "8k_items": [
-      "9.01",
-      "5.02"
+      "5.02",
+      "9.01"
     ],
     "text_preview": "chrw-20260529 0001043277 false 0001043277 2026-05-29 2026-05-29 &#160;&#160;&#160;&#160; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM 8-K CURRENT REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 Date of Report: May 29, 2026 (Date of earliest event reported) C.H. ROBINSON WORLDWIDE, INC. (Exact name of registrant as specified in its charter) Commission File Number: 000-23189 Delaware &#160; 41-1883630 (State or other jurisdiction of inc",
-    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_8-K_C_H__Robinson.html",
-    "nature": "Attribution d'actions de performance et restreintes",
-    "resume": "C.H. Robinson octroie au Chief Strategy and Innovation Officer, Arun Rajan, un plan d'actions exceptionnel de 7,5 millions de dollars. Ce programme vise à stimuler la croissance, l'innovation technologique et le développement des talents d'ici 2030.",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-04/raw/sec/2026-06-02_8_K_C_H__Robinson.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1043277/000104327726000023/ex101toxrajan2026specialps.htm",
+    "nature": "Attribution d'actions de performance",
+    "resume": "C.H. Robinson octroie à son Chief Strategy and Innovation Officer, Arun Rajan, une prime en actions évaluée à 7,5 millions de dollars (6 millions en unités de performance et 1,5 million en unités restreintes). Ce plan vise à stimuler la croissance, l'innovation IA et le développement du leadership sur la période 2026-2030.",
     "tag": "MANAGEMENT",
-    "priority": 5
+    "priority": 5,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Priorité technologique (AI) :** La stratégie de croissance repose sur l'intégration de produits et solutions basés sur l'IA, avec un objectif spécifique d'accroissement de la \"gross profit\" dans l'unité *Robinson Managed Services* pour deux années consécutives d'ici 2030.\n- **Accélération du segment *Truckload* :** Le management lie directement la rémunération de son dirigeant stratégique à la capacité de générer une \"high-quality truckload growth\" sur la période 2026-2030, signalant une volonté de redynamiser ce cœur de métier.\n- **Horizon stratégique long terme :** L'horizon de performance est fixé à 5 ans (2026-2030), illustrant une vision de transformation structurelle plutôt que de simple ajustement opérationnel à court terme.\n- **Culture de la performance financière :** L'introduction d'un mécanisme d'« outperformance » lié aux objectifs de bénéfice par action (EPS) ajusté pour 2030, avec un levier de paiement allant jusqu'à 200% de la cible, indique une volonté managériale d'aligner strictement les incitations sur la croissance des marges.\n\nANTICIPATION: Ce document indique que C.H. Robinson prépare une phase d'investissement technologique intensif pour les trimestres à venir, cherchant à transformer son modèle opérationnel par l'IA tout en maintenant une pression exigeante sur la rentabilité du segment *Truckload*.\n\nCONVICTION_MANAGEMENT: Haute (L'engagement financier massif et le calendrier sur 5 ans démontrent une volonté claire du board de verrouiller la stratégie actuelle autour de l'innovation et de l'efficacité opérationnelle)."
   }
 ]
