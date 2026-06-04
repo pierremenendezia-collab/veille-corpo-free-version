@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from fetchers.sec_fetcher import run as sec_run
 from analyzers.report_builder import save_digest
-from analyzers.llm_analyzer import analyze_all
+from analyzers.llm_analyzer import analyze_all, deduplicate_for_email
 from delivery.email_sender import send as send_daily
 from delivery.weekly_recap import send_weekly
 
@@ -79,7 +79,11 @@ def main():
     if args.no_email:
         print("  Email ignoré (--no-email actif)")
     elif interesting:
-        send_daily("", interesting)
+        # Relecture globale finale : retire les doublons (même news redéposée).
+        deduped = deduplicate_for_email(interesting)
+        if len(deduped) < len(interesting):
+            print(f"  Dédup : {len(interesting)} → {len(deduped)} publication(s) après relecture")
+        send_daily("", deduped)
     else:
         print("  Aucune publication notable → pas d'email quotidien envoyé.")
 

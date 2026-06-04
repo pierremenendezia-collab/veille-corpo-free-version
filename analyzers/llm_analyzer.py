@@ -253,3 +253,75 @@ def analyze_all(results: list[dict]) -> list[dict]:
             result["strategic"] = ""
 
     return results
+
+
+# Relecture globale finale du mail. Il arrive (rarement) qu'une même news soit
+# déclinée par l'entreprise en plusieurs dépôts quasi identiques (ex. annonce de
+# cotation déposée 2-3 fois). Gemini relit l'ensemble et signale les doublons à
+# retirer. Conservateur : au moindre doute, on ne retire rien.
+DEDUP_PROMPT = """Voici les publications retenues pour l'e-mail de veille du jour, numérotées.
+Certaines peuvent décrire EXACTEMENT le même événement sous-jacent (même entreprise, même news redéposée en plusieurs exemplaires quasi identiques). Ton rôle : repérer ces doublons pour n'en garder qu'un seul par événement.
+
+{listing}
+
+Règles STRICTES :
+- Ne regroupe QUE des publications de la MÊME entreprise décrivant le MÊME événement.
+- En cas de doute, NE RETIRE RIEN. Mieux vaut un doublon qu'une information perdue.
+- Dans un groupe de doublons, GARDE la plus complète (résumé le plus riche, signaux présents) et retire les autres.
+- Ne retire JAMAIS une publication qui apporte une information distincte.
+
+Réponds UNIQUEMENT par les numéros entre crochets à RETIRER, séparés par des virgules (ex : [2], [5]).
+S'il n'y a aucun doublon, réponds EXACTEMENT : AUCUN"""
+
+
+def deduplicate_for_email(results: list[dict]) -> list[dict]:
+    """
+    Relecture globale finale : Gemini repère les publications décrivant le MÊME
+    événement (même entreprise, news redéposée en plusieurs exemplaires) et on
+    retire les redondantes en gardant la plus complète. Conservateur par
+    construction (au moindre doute, rien n'est retiré). S'applique à l'e-mail
+    uniquement — results.json conserve la trace complète.
+    """
+    if client is None or len(results) < 2:
+        return results
+
+    from collections import Counter
+    counts = Counter(r.get("company", "") for r in results)
+    if not any(n >= 2 for n in counts.values()):
+        return results  # aucune entreprise en double → rien à dédupliquer
+
+    lines = []
+    for i, r in enumerate(results):
+        resume = (r.get("resume") or "").replace("\n", " ")[:200]
+        lines.append(
+            f"[{i}] {r.get('company','')} — {r.get('form','')} {r.get('date','')}"
+            f" · {r.get('tag','')} · {r.get('nature','')} — {resume}"
+        )
+    listing = "\n".join(lines)
+
+    try:
+        raw = _generate_with_retry(DEDUP_PROMPT.format(listing=listing)).strip()
+    except Exception as e:
+        print(f"  [dedup ERREUR] {str(e)[:60]} — aucun retrait", flush=True)
+        return results
+
+    if "AUCUN" in raw.upper():
+        return results
+
+    # Parsing STRICT : on n'accepte que des indices entre crochets.
+    to_remove = {int(m) for m in re.findall(r"\[(\d+)\]", raw)}
+    valid = {i for i in to_remove if 0 <= i < len(results)}
+    if not valid or len(valid) >= len(results):
+        return results  # rien d'exploitable, ou tentative de tout retirer
+
+    kept = [r for i, r in enumerate(results) if i not in valid]
+    # Garde-fou : ne jamais faire disparaître complètement une entreprise du mail.
+    if {r.get("company", "") for r in kept} != {r.get("company", "") for r in results}:
+        print("  [dedup] retrait annulé (ferait disparaître une entreprise)", flush=True)
+        return results
+
+    for i in sorted(valid):
+        r = results[i]
+        print(f"  [dedup] doublon retiré : {r.get('company','')} — {r.get('form','')} · {r.get('nature','')}", flush=True)
+
+    return kept
