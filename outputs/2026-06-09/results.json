@@ -1,0 +1,47 @@
+[
+  {
+    "company": "Genco Shipping & Trading",
+    "ticker": "GNK",
+    "sector": "shipping_dry_bulk",
+    "date": "2026-06-08",
+    "form": "SC 13D/A",
+    "description": "SC TO-T/A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326200/000110465926071337/tm2612953d33_sctota.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1326200&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-071337",
+    "is_earnings": false,
+    "is_ma_signal": true,
+    "8k_items": [],
+    "text_preview": "SC TO-T/A 1 tm2612953d33_sctota.htm SC TO-T/A &nbsp; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; SCHEDULE TO Tender Offer Statement under Section 14(d)(1) or 13(e)(1) of the Securities Exchange Act of 1934 (Amendment No. 10) &nbsp; Genco Shipping &amp; Trading Limited (Name of Subject Company (Issuer)) &nbsp; 4 Dragon Merger Sub Inc. (Offeror) a direct wholly owned subsidiary of &nbsp; Diana Shipping Inc. (Parent of Offeror) (Names of Filing Persons (identifyin",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-09/raw/sec/2026-06-08_SC_13D_A_Genco_Shipping___Trading.html",
+    "exhibit_url": "",
+    "nature": "Amendement à une offre publique d'achat (OPA)",
+    "resume": "Diana Shipping réduit sa liste de candidats au conseil d'administration de Genco Shipping, ne conservant que deux nommés pour cibler spécifiquement deux administrateurs sortants. L'offre de rachat en numéraire à 24,80 $ par action est maintenue.",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Stratégie de consolidation persistante :** Diana Shipping maintient son offre publique d'achat (\"Offer\") sur l'intégralité des actions en circulation de Genco à un prix de 24,80 $ par action, confirmant son ambition de fusion/acquisition malgré les obstacles.\n- **Stratégie de \"Proxy Fight\" ciblée :** Le management ajuste tactiquement sa campagne pour le contrôle du conseil d'administration en réduisant sa liste de candidats à deux profils (\"Jens Ismar and Paul Cornell\") pour optimiser ses chances d'évincer deux administrateurs en poste (\"Arthur L. Regan and Basil G. Mavroleon\").\n- **Engagement dans la gouvernance :** Le dépôt d'un supplément à la déclaration de procuration (\"proxy statement\") indique une volonté ferme de peser directement sur la stratégie opérationnelle de Genco par le remplacement de membres clés du Board.\n- **Allocation du capital :** Le maintien de l'offre en numéraire (cash tender offer) et le financement via \"WC, BK\" (fonds de roulement et emprunts bancaires) démontrent une mobilisation active des ressources financières pour finaliser cette prise de contrôle.\n\nANTICIPATION: Diana Shipping prépare une confrontation directe lors de l'assemblée annuelle pour forcer une réorientation stratégique ou une prise de contrôle de Genco, ce qui laisse présager une volatilité accrue sur le titre GNK dans les 2 à 3 prochains trimestres.\n\nCONVICTION_MANAGEMENT: Haute"
+  },
+  {
+    "company": "FedEx",
+    "ticker": "FDX",
+    "sector": "logistics",
+    "date": "2026-06-08",
+    "form": "8-K",
+    "description": "FORM 8-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1048911/000110465926071411/tm2617052d1_8k.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1048911&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-071411",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [
+      "9.01",
+      "5.02"
+    ],
+    "text_preview": "false 0001048911 0001048911 2026-06-08 2026-06-08 0001048911 us-gaap:CommonStockMember 2026-06-08 2026-06-08 0001048911 fdx:Notes1.625PercentDue2027Member 2026-06-08 2026-06-08 0001048911 fdx:Notes0.450PercentDue2029OneMember 2026-06-08 2026-06-08 0001048911 fdx:Notes0.450PercentDue2029TwoMember 2026-06-08 2026-06-08 0001048911 fdx:Notes1.300PercentDue2031TwoMember 2026-06-08 2026-06-08 0001048911 fdx:Notes3.500PercentDue2032Member 2026-06-08 2026-06-08 0001048911 fdx:Notes0.950PercentDue2033One",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-09/raw/sec/2026-06-08_8_K_FedEx.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1048911/000110465926071411/tm2617052d1_ex99-1.htm",
+    "nature": "Changement au conseil d'administration",
+    "resume": "FedEx annonce l'élection de Mark A. Edmunds au poste d'administrateur, où il présidera le comité d'audit. Parallèlement, Silvia Davila démissionne de ses fonctions au sein du conseil suite à un changement de carrière.",
+    "tag": "MANAGEMENT",
+    "priority": 5,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\n\nANTICIPATION: N/A\nCONVICTION_MANAGEMENT: N/A"
+  }
+]
