@@ -1,6 +1,6 @@
 # Veille Corporate — Transport, Logistique, Infrastructures
 
-Système automatisé de veille quotidienne sur ~100 entreprises cotées du secteur transport / logistique / infrastructures. Récupère les publications réglementaires (earnings, M&A, rapports annuels...) et les analyse via LLM pour ne livrer par email que les signaux pertinents.
+Système automatisé de veille quotidienne sur ~90 entreprises cotées du secteur transport / logistique / infrastructures. Récupère les publications réglementaires (earnings, M&A, rapports annuels...) et les analyse via LLM pour ne livrer par email que les signaux pertinents.
 
 L'analyse se fait à **deux niveaux** : d'abord classer et résumer chaque document, puis — sur les documents qui le méritent — **lire entre les lignes** le discours des dirigeants pour en tirer des signaux tournés vers l'avenir. Une relecture finale du mail élimine les rares doublons avant envoi.
 
@@ -17,7 +17,7 @@ L'analyse se fait à **deux niveaux** : d'abord classer et résumer chaque docum
 
 ```
 veille-corpo-free-version/
-├── companies.json              ← 88 entreprises (34 US actives)
+├── companies.json              ← 91 entreprises (34 cotées SEC, actives)
 ├── config.json                 ← clés API + email (NON commité)
 ├── run_daily.py                ← orchestrateur principal
 ├── fetchers/
@@ -115,4 +115,4 @@ crontab -e
 - Planification via **GitHub Actions** (cron `0 7 * * 1-5` = 9h Paris en été). Le cron GitHub n'est pas garanti à la minute (retards possibles) et se désactive après ~60 jours sans activité sur le repo — un déclencheur plus fiable est une piste d'amélioration.
 - Free tier Gemini : 1500 req/jour (largement suffisant pour ~30 docs/jour).
 - SEC EDGAR : 10 req/sec max (gestion automatique via throttle).
-- Couverture actuelle : 34 entreprises US. Phase 2 prévue pour les ~54 entreprises FR/EU (AMF + scraping IR).
+- Couverture actuelle : 34 entreprises cotées SEC. Phase 2 prévue pour les ~57 entreprises restantes, majoritairement FR/EU (AMF + scraping IR).
