@@ -1,0 +1,46 @@
+[
+  {
+    "company": "Genco Shipping & Trading",
+    "ticker": "GNK",
+    "sector": "shipping_dry_bulk",
+    "date": "2026-06-15",
+    "form": "SC 13D/A",
+    "description": "SC TO-T/A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326200/000110465926073893/tm2612953d42_sctota.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1326200&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-073893",
+    "is_earnings": false,
+    "is_ma_signal": true,
+    "8k_items": [],
+    "text_preview": "SC TO-T/A 1 tm2612953d42_sctota.htm SC TO-T/A &nbsp; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; SCHEDULE TO Tender Offer Statement under Section&nbsp;14(d)(1)&nbsp;or 13(e)(1) of the Securities Exchange Act of 1934 (Amendment No.&nbsp;13) &nbsp; Genco Shipping&nbsp;&amp; Trading Limited (Name of Subject Company (Issuer)) &nbsp; 4 Dragon Merger Sub Inc. (Offeror) a direct wholly owned subsidiary of &nbsp; Diana Shipping Inc. (Parent of Offeror) (Names of Filing",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-15/raw/sec/2026-06-15_SC_13D_A_Genco_Shipping___Trading.html",
+    "exhibit_url": "",
+    "nature": "Mise à jour offre publique d'achat",
+    "resume": "Diana Shipping poursuit son OPA hostile sur Genco Shipping & Trading au prix de 24,80 $ par action. Cette 13ème modification du document SC TO-T confirme la persistance de l'offre initiée par la filiale 4 Dragon Merger Sub Inc.",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\n\nANTICIPATION: N/A\n\nCONVICTION_MANAGEMENT: N/A"
+  },
+  {
+    "company": "UPS",
+    "ticker": "UPS",
+    "sector": "logistics",
+    "date": "2026-06-15",
+    "form": "8-K",
+    "description": "8-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1090727/000162828026043196/ups-20260613.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1090727&type=&dateb=&owner=include&count=10&search_text=#filing-0001628280-26-043196",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [
+      "5.02"
+    ],
+    "text_preview": "ups-20260613 0001090727 false June 13, 2026 0001090727 2026-06-15 2026-06-15 0001090727 exch:XNYS 2026-06-15 2026-06-15 0001090727 exch:XNYS ups:SeniorNotes1Due2028Member 2026-06-15 2026-06-15 0001090727 exch:XNYS ups:SeniorNotes1.500Due2032Member 2026-06-15 2026-06-15 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &#160; FORM 8-K CURRENT REPORT Pursuant to Section&#160;13 or 15(d) of the Securities Exchange Act of 1934 Date&#160;of&#160;Report&#160;(Date&#160;of&#160;ea",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-15/raw/sec/2026-06-15_8_K_UPS.html",
+    "exhibit_url": "",
+    "nature": "Démission d'une administratrice du conseil",
+    "resume": "Eva Boratto quitte ses fonctions de membre du Conseil d'administration d'UPS avec effet immédiat. Cette décision, sans désaccord avec l'entreprise, est liée à sa nomination en tant que directrice financière de Cencora, Inc.",
+    "tag": "MANAGEMENT",
+    "priority": 5,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\n\nANTICIPATION: N/A\n\nCONVICTION_MANAGEMENT: N/A"
+  }
+]
