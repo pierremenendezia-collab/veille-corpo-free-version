@@ -1,0 +1,23 @@
+[
+  {
+    "company": "Genco Shipping & Trading",
+    "ticker": "GNK",
+    "sector": "shipping_dry_bulk",
+    "date": "2026-06-29",
+    "form": "SC 13D/A",
+    "description": "SC TO-T/A",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326200/000110465926078605/tm2612953d50_sctota.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1326200&type=&dateb=&owner=include&count=10&search_text=#filing-0001104659-26-078605",
+    "is_earnings": false,
+    "is_ma_signal": true,
+    "8k_items": [],
+    "text_preview": "SC TO-T/A 1 tm2612953d50_sctota.htm SC TO-T/A &nbsp; &nbsp; &nbsp; UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; SCHEDULE TO Tender Offer Statement under Section&nbsp;14(d)(1)&nbsp;or 13(e)(1) of the Securities Exchange Act of 1934 (Amendment No.&nbsp;17) &nbsp; Genco Shipping&nbsp;&amp; Trading Limited (Name of Subject Company (Issuer)) &nbsp; 4 Dragon Merger Sub Inc. (Offeror) a direct wholly owned subsidiary of &nbsp; Diana Shipping Inc. (Parent of Offeror) (N",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-06-29/raw/sec/2026-06-29_SC_13D_A_Genco_Shipping___Trading.html",
+    "exhibit_url": "",
+    "nature": "Offre publique d'achat hostile.",
+    "resume": "Diana Shipping prolonge son offre publique d'achat sur Genco jusqu'au 10 juillet 2026. L'offre a été relevée à 27,34 $ par action (24,80 $ en numéraire plus des actions Diana) pour acquérir le solde du capital.",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **M&A et consolidation :** Diana Shipping intensifie sa pression pour acquérir Genco en proposant une nouvelle offre « pour acquérir tous les titres de capital non détenus par Diana » pour une valeur totale de 27,34 $ par action (24,80 $ en cash + une action Diana).\n- **Stratégie d'acquisition :** Le passage d'une offre purement en cash à une structure mixte (cash + actions) indique une volonté de finaliser l'opération tout en préservant la liquidité de Diana Shipping.\n- **Calendrier de l'offre :** L'extension de la date d'expiration de l'offre au 10 juillet 2026 montre une détermination du management à laisser le temps nécessaire pour convaincre les actionnaires de Genco, malgré un taux de réponse initial de 28,4 % des actions hors-Diana.\n- **Engagement capitalistique :** Le recours au financement « WC, BK » (fonds de roulement et lignes bancaires) confirme que Diana mobilise ses structures de capital existantes pour mener à bien cette opération de consolidation du secteur *dry bulk*.\n\nANTICIPATION: La stratégie de Diana Shipping suggère une tentative de bouclage de l'OPA d'ici la mi-juillet 2026, avec une possible surenchère ou une négociation directe avec le Board de Genco pour obtenir une recommandation positive, transformant le paysage concurrentiel du vrac sec.\n\nCONVICTION_MANAGEMENT: Haute"
+  }
+]
