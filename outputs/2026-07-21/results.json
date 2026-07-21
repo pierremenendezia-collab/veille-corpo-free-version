@@ -1,0 +1,23 @@
+[
+  {
+    "company": "FedEx",
+    "ticker": "FDX",
+    "sector": "logistics",
+    "date": "2026-07-20",
+    "form": "10-K",
+    "description": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1048911&type=&dateb=&owner=include&count=10&search_text=#filing-0001048911-26-000105",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [],
+    "text_preview": "fdx-20260531 FALSE 0001048911 2026 FY http://fasb.org/us-gaap/2026#AccountsPayableCurrent http://fasb.org/us-gaap/2026#AccountsPayableCurrent http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization http://fasb.org/us-gaap/2026#LongTermDebtAndCapitalLeaseObligationsCurrent http://fasb.org/us-gaap/202",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-07-21/raw/sec/2026-07-20_10_K_FedEx.html",
+    "exhibit_url": "",
+    "nature": "Rapport annuel 10-K FedEx",
+    "resume": "FedEx publie ses états financiers complets pour l'exercice fiscal clos le 31 mai 2026. Le document détaille ses segments opérationnels, ses programmes de rachat d'actions et la gestion de sa dette à long terme.",
+    "tag": "EARNINGS",
+    "priority": 2,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Allocation du capital et retours aux actionnaires** : Le management maintient une discipline stricte avec le \"2024 Repurchase Program\" et l'utilisation d'accords de rachat d'actions accéléré (ASR), témoignant d'une volonté de soutenir le cours de bourse tout en optimisant la structure de capital.\n- **Gestion de la dette** : Stratégie active de refinancement et de gestion des échéances, avec une attention portée sur le maintien de facilités de crédit renouvelables (3-Year et 5-Year Credit Agreements) et le traitement du \"Term Loan Facility\" de FedEx Freight.\n- **Modernisation de la flotte** : Poursuite du renouvellement des actifs avec une distinction nette entre le retrait d'appareils moins efficients (ex: MD11F, Airbus A300) et le maintien d'une capacité opérationnelle agile pour le segment \"Wide-Body\" et \"Narrow-Body\".\n- **Optimisation opérationnelle** : Le programme \"Network 2.0\" et les \"International Operational Transformation Programs\" sont au cœur de la stratégie pour transformer le réseau, visant des gains de productivité structurels.\n- **Expansion stratégique** : Mention explicite de l'investissement dans InPost (09/02/2026), signalant une volonté de renforcer les capacités logistiques du dernier kilomètre.\n\nANTICIPATION: La stratégie suggère une phase de transition opérationnelle intense où les économies d'échelle et la rationalisation du réseau prévalent sur la croissance organique rapide, avec un risque de capex concentré sur la modernisation technologique et la flotte.\n\nCONVICTION_MANAGEMENT: Haute"
+  }
+]
