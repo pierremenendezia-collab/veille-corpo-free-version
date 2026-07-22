@@ -1,0 +1,47 @@
+[
+  {
+    "company": "FedEx",
+    "ticker": "FDX",
+    "sector": "logistics",
+    "date": "2026-07-21",
+    "form": "8-K",
+    "description": "8-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000108/fdx-20260721.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1048911&type=&dateb=&owner=include&count=10&search_text=#filing-0001048911-26-000108",
+    "is_earnings": true,
+    "is_ma_signal": false,
+    "8k_items": [
+      "2.02",
+      "9.01"
+    ],
+    "text_preview": "fdx-20260721 FALSE 0001048911 0001048911 2026-07-21 2026-07-21 0001048911 us-gaap:CommonStockMember 2026-07-21 2026-07-21 0001048911 fdx:OnePointSixTwoFivePercentageNotesDueTwoThousandTwentySevenMember 2026-07-21 2026-07-21 0001048911 fdx:ZeroPointFourFiveZeroPercentNotesDueTwentyTwentyNine29AMember 2026-07-21 2026-07-21 0001048911 fdx:ZeroPointFourFiveZeroPercentNotesDueTwoThousandTwentyNine29BMember 2026-07-21 2026-07-21 0001048911 fdx:OnePointThreeZeroZeroPercentNotesDueTwoThousandThirtyOneMe",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-07-22/raw/sec/2026-07-21_8_K_FedEx.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000108/fedexrecastexhibit991.htm",
+    "nature": "Changement d'exercice et de segments",
+    "resume": "FedEx modifie sa date de clôture fiscale au 31 décembre, finalise la scission de FedEx Freight (présenté en activités abandonnées) et annonce la vente de FedEx Supply Chain pour 1,4 milliard de dollars. Ces changements s'accompagnent d'une réorganisation en deux nouveaux segments (Express U.S. Domestic et Express International).",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Transition calendaire et reporting** : Changement de la fin d'exercice fiscal du 31 mai au 31 décembre, avec un rapport de transition de 7 mois (du 1er juin au 31 décembre 2026) avant une transition vers un reporting en année calendaire dès 2027.\n- **Restructuration du portefeuille et M&A** : Annonce le 1er juillet 2026 de la vente de l'activité FedEx Supply Chain au groupe CMA CGM pour 1,4 milliard de dollars (clôture attendue au S2 2026), après la scission (spin-off) effective le 1er juin 2026 de FedEx Freight (classé en activités discontinuées).\n- **Objectifs stratégiques et réduction des coûts** : Focus sur la capacité à atteindre les performances financières cibles de 2029 et à exécuter les programmes de transformation globale et d'optimisation des réseaux (Network 2.0 et Tricolor), tout en gérant l'atténuation des coûts stranded (échoués) liés au spin-off.\n- **Investissements et jours opérationnels** : Prévisions de jours opérationnels fixées à 255 jours pour l'exercice 2026 et 254 jours pour 2027 (segment Express U.S. Domestic).\n\nANTICIPATION: Les prochains trimestres seront marqués par la digestion des lourdes opérations de restructuration (spin-off de FedEx Freight et cession annoncée de FedEx Supply Chain) et par la mise en place du nouveau calendrier fiscal au 31 décembre 2026, tout en surveillant la concrétisation des réductions de coûts et l'efficacité des nouveaux segments (Express U.S. Domestic et Express International).\nCONVICTION_MANAGEMENT: Moyenne"
+  },
+  {
+    "company": "FedEx",
+    "ticker": "FDX",
+    "sector": "logistics",
+    "date": "2026-07-20",
+    "form": "10-K",
+    "description": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000105/fdx-20260531.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1048911&type=&dateb=&owner=include&count=10&search_text=#filing-0001048911-26-000105",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [],
+    "text_preview": "fdx-20260531 FALSE 0001048911 2026 FY http://fasb.org/us-gaap/2026#AccountsPayableCurrent http://fasb.org/us-gaap/2026#AccountsPayableCurrent http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization http://fasb.org/us-gaap/2026#LongTermDebtAndCapitalLeaseObligationsCurrent http://fasb.org/us-gaap/202",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-07-22/raw/sec/2026-07-20_10_K_FedEx.html",
+    "exhibit_url": "",
+    "nature": "Rapport annuel 10-K FedEx",
+    "resume": "Ce document financier annuel officiel présente les états financiers consolidés de FedEx pour l'exercice clos le 31 mai 2026, incluant les bilans par segment et les obligations de dette. Il détaille la situation financière globale de l'entreprise de logistique.",
+    "tag": "EARNINGS",
+    "priority": 2,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\nANTICIPATION: N/A\nCONVICTION_MANAGEMENT: N/A"
+  }
+]
