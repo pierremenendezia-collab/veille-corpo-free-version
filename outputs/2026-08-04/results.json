@@ -1,0 +1,23 @@
+[
+  {
+    "company": "Navigator Gas",
+    "ticker": "NVGS",
+    "sector": "shipping_gas",
+    "date": "2026-08-03",
+    "form": "6-K",
+    "description": "6-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1581804/000119312526329554/d69858d6k.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1581804&type=&dateb=&owner=include&count=10&search_text=#filing-0001193125-26-329554",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [],
+    "text_preview": "6-K 1 d69858d6k.htm 6-K 6-K &nbsp; &nbsp; UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 &nbsp; &nbsp; Form 6-K &nbsp; &nbsp; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13-16 or 15d-16 UNDER THE SECURITIES EXCHANGE ACT OF 1934 For the month of August 2026 Commission File Number 001-36202 &nbsp; &nbsp; NAVIGATOR HOLDINGS LTD. (Exact name of Registrant as specified in its Charter) &nbsp; &nbsp; c/o NGT Services UK Ltd 10 Bressenden Place London, SW1E 5DH United King",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-08-04/raw/sec/2026-08-03_6_K_Navigator_Gas.html",
+    "exhibit_url": "https://www.sec.gov/Archives/edgar/data/1581804/000119312526329554/d69858dex991.htm",
+    "nature": "Financement navires amoniac JV",
+    "resume": "Navigator Gas annonce que ses filiales en coentreprise ont conclu un accord de prêt à terme garanti de 121,8 millions de dollars pour financer la livraison de deux nouveaux transporteurs d'ammoniac. L'emprunt, d'une durée de six ans, présente un taux d'intérêt de SOFR plus 1,35 % et couvre jusqu'à 70 % du coût des navires en construction.",
+    "tag": "M&A_STRATEGIE",
+    "priority": 1,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- **Allocation du capital et financement des capex** : Le CFO Gary Chapman souligne un engagement vers une \"allocation disciplinée du capital\" et la préservation de la \"flexibilité du bilan\" tout en finançant la construction de ces navires de nouvelle génération grâce à un crédit bancaire attractif.\n- **Structure de financement des Newbuilds** : Le prêt syndiqué de 121,8 millions de dollars couvre \"jusqu'à 70% du coût des deux navires\", le reste des paiements (pré-livraison et solde) étant assuré par les liquidités des emprunteurs et des actionnaires de la coentreprise Navigator Amon Shipping AS.\n- **Vision du marché et positionnement stratégique** : La coentreprise mise sur \"la demande à long terme des clients pour le transport sûr et efficace d'ammoniac\", avec des navires bicarburation capables d'opérer sur \"les marchés actuels du GPL et de l'ammoniac ainsi que sur le marché émergent de l'ammoniac comme combustible marin\".\n- **Calendrier de livraison de la flotte** : La livraison des deux navires neufs de 51 350 mètres cubes — commandés en juillet 2025 auprès de Nantong CIMC Sinopacific Offshore & Engineering — est fermement programmée pour \"mai 2028 et septembre 2028\".\n\nANTICIPATION: Pour les 2-3 prochains trimestres, ce communiqué laisse présager la poursuite de la construction des navires dans les chantiers chinois et le suivi de l'exécution financière de la coentreprise Navigator Amon, sans impact immédiat sur les flux de trésorerie opérationnels actuels de la flotte existante de 54 navires.\n\nCONVICTION_MANAGEMENT: Haute"
+  }
+]
