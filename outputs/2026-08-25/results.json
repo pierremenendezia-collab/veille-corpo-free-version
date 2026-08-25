@@ -1,0 +1,23 @@
+[
+  {
+    "company": "Torm",
+    "ticker": "TRMD.A",
+    "sector": "shipping_tanker",
+    "date": "2026-08-24",
+    "form": "6-K",
+    "description": "",
+    "url": "https://www.sec.gov/Archives/edgar/data/1655891/000091957426005684/p15057626_6-k.htm",
+    "index_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1655891&type=&dateb=&owner=include&count=10&search_text=#filing-0000919574-26-005684",
+    "is_earnings": false,
+    "is_ma_signal": false,
+    "8k_items": [],
+    "text_preview": "6-K 1 p15057626_6-k.htm UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 &nbsp; FORM 6-K &nbsp; REPORT OF FOREIGN PRIVATE ISSUER PURSUANT TO RULE 13A-16 OR 15D-16 OF THE SECURITIES EXCHANGE ACT OF 1934 &nbsp; For the month of August 2026 &nbsp; Commission File Number 001-38294 &nbsp; TORM plc &nbsp; 4th&nbsp;Floor, 120 Cannon Street, London, EC4N 6AS, United Kingdom &nbsp; (Address of principal executive offices) &nbsp; Indicate by check mark whether the registrant files o",
+    "local_file": "/home/runner/work/veille-corpo-free-version/veille-corpo-free-version/outputs/2026-08-25/raw/sec/2026-08-24_6_K_Torm.html",
+    "exhibit_url": "",
+    "nature": "Nomination au conseil d'administration",
+    "resume": "TORM plc annonce la nomination de Jann Brown à son Conseil d'administration à compter du 1er octobre 2026, ainsi que la promotion d'Annette Malm Justad au poste de Senior Independent Director.",
+    "tag": "MANAGEMENT",
+    "priority": 5,
+    "strategic": "SIGNAUX_PROSPECTIFS:\n- Pas de signal prospectif exploitable dans ce document.\nANTICIPATION: N/A\nCONVICTION_MANAGEMENT: N/A"
+  }
+]
